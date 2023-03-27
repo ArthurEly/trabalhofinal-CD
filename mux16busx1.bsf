@@ -1,0 +1,183 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 256 448)
+	(text "mux16busx1" (rect 5 0 78 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 368 25 380)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "memF[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "memF[7..0]" (rect 21 67 82 81)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "memE[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "memE[7..0]" (rect 21 83 82 97)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 16 88)(line_width 3))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "memD[7..0]" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "memD[7..0]" (rect 21 99 83 113)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104)(line_width 3))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "memC[7..0]" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "memC[7..0]" (rect 21 115 83 129)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 16 120)(line_width 3))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "memB[7..0]" (rect 0 0 62 14)(font "Arial" (font_size 8)))
+		(text "memB[7..0]" (rect 21 131 83 145)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 16 136)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "memA[7..0]" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "memA[7..0]" (rect 21 147 84 161)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 16 152)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "mem9[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem9[7..0]" (rect 21 163 82 177)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 16 168)(line_width 3))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "mem8[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem8[7..0]" (rect 21 179 82 193)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 16 184)(line_width 3))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "mem7[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem7[7..0]" (rect 21 195 82 209)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 16 200)(line_width 3))
+	)
+	(port
+		(pt 0 216)
+		(input)
+		(text "mem6[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem6[7..0]" (rect 21 211 82 225)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 16 216)(line_width 3))
+	)
+	(port
+		(pt 0 232)
+		(input)
+		(text "mem5[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem5[7..0]" (rect 21 227 82 241)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 16 232)(line_width 3))
+	)
+	(port
+		(pt 0 248)
+		(input)
+		(text "mem4[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem4[7..0]" (rect 21 243 82 257)(font "Arial" (font_size 8)))
+		(line (pt 0 248)(pt 16 248)(line_width 3))
+	)
+	(port
+		(pt 0 264)
+		(input)
+		(text "mem3[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem3[7..0]" (rect 21 259 82 273)(font "Arial" (font_size 8)))
+		(line (pt 0 264)(pt 16 264)(line_width 3))
+	)
+	(port
+		(pt 0 280)
+		(input)
+		(text "mem2[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem2[7..0]" (rect 21 275 82 289)(font "Arial" (font_size 8)))
+		(line (pt 0 280)(pt 16 280)(line_width 3))
+	)
+	(port
+		(pt 0 296)
+		(input)
+		(text "mem1[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem1[7..0]" (rect 21 291 82 305)(font "Arial" (font_size 8)))
+		(line (pt 0 296)(pt 16 296)(line_width 3))
+	)
+	(port
+		(pt 0 312)
+		(input)
+		(text "mem0[7..0]" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "mem0[7..0]" (rect 21 307 82 321)(font "Arial" (font_size 8)))
+		(line (pt 0 312)(pt 16 312)(line_width 3))
+	)
+	(port
+		(pt 0 352)
+		(input)
+		(text "GN" (rect 0 0 17 14)(font "Arial" (font_size 8)))
+		(text "GN" (rect 21 347 38 361)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 16 352))
+	)
+	(port
+		(pt 152 0)
+		(input)
+		(text "address0" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "address0" (rect 144 25 158 79)(font "Arial" (font_size 8))(vertical))
+		(line (pt 152 0)(pt 152 17))
+	)
+	(port
+		(pt 136 0)
+		(input)
+		(text "address1" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "address1" (rect 128 25 142 79)(font "Arial" (font_size 8))(vertical))
+		(line (pt 136 0)(pt 136 16))
+	)
+	(port
+		(pt 120 0)
+		(input)
+		(text "address2" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "address2" (rect 112 25 126 79)(font "Arial" (font_size 8))(vertical))
+		(line (pt 120 0)(pt 120 17))
+	)
+	(port
+		(pt 104 0)
+		(input)
+		(text "address3" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "address3" (rect 96 25 110 79)(font "Arial" (font_size 8))(vertical))
+		(line (pt 104 0)(pt 104 17))
+	)
+	(port
+		(pt 192 184)
+		(output)
+		(text "data_out[7..0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "data_out[7..0]" (rect 94 179 171 193)(font "Arial" (font_size 8)))
+		(line (pt 192 184)(pt 176 184)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 368))
+	)
+)

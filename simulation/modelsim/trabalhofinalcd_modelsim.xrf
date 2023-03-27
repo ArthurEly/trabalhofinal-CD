@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_2BYTES.bdf
+source_file = 1, C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_reg2bytes.vwf
+source_file = 1, C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/db/trabalhofinalcd.cbx.xml
+design_name = REG_2BYTES
+instance = comp, \pin_name3~output\, pin_name3~output, REG_2BYTES, 1
+instance = comp, \pin_name2~input\, pin_name2~input, REG_2BYTES, 1
+instance = comp, \pin_name1~input\, pin_name1~input, REG_2BYTES, 1
