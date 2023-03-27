@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 448 -168 464 0)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "data_in[7..0]" (rect 8 5 20 67)(font "Arial" )(vertical))
+	(text "data_in[7..0]" (rect 8 5 20 66)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -40,7 +40,7 @@ applicable agreement for further details.
 	(input)
 	(rect 496 -168 512 0)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "clk" (rect 6 5 18 20)(font "Arial" )(vertical))
+	(text "clk" (rect 6 5 18 19)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -125,7 +125,7 @@ applicable agreement for further details.
 	(input)
 	(rect -40 1016 128 1032)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "write" (rect 5 0 28 12)(font "Arial" ))
+	(text "write" (rect 5 0 27 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1047,33 +1047,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 896 1096 944 1128)
-	(text "NOT" (rect 27 22 47 32)(font "Arial" (font_size 6)))
-	(text "inst21" (rect 16 -1 45 11)(font "Arial" ))
-	(port
-		(pt 48 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 35 13 46 25)(font "Courier New" (bold))(invisible))
-		(line (pt 48 16)(pt 35 16))
-	)
-	(port
-		(pt 0 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect -1 13 16 25)(font "Courier New" (bold))(invisible))
-		(line (pt 9 16)(pt 0 16))
-	)
-	(drawing
-		(line (pt 35 7)(pt 35 25))
-		(line (pt 35 25)(pt 17 16))
-		(line (pt 35 7)(pt 17 16))
-		(circle (rect 9 12 17 20))
-	)
-	(rotate180)
-)
-(symbol
-	(rect 984 1096 1016 1128)
+	(rect 928 1096 960 1128)
 	(text "GND" (rect 16 3 26 24)(font "Arial" (font_size 6))(vertical))
 	(text "inst23" (rect 21 0 33 29)(font "Arial" )(vertical)(invisible))
 	(port
@@ -1907,11 +1881,7 @@ applicable agreement for further details.
 )
 (connector
 	(pt 832 1112)
-	(pt 896 1112)
-)
-(connector
-	(pt 944 1112)
-	(pt 984 1112)
+	(pt 928 1112)
 )
 (junction (pt 456 1592))
 (junction (pt 456 1496))

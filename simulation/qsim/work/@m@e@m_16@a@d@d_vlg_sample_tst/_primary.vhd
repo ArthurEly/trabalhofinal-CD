@@ -8,7 +8,6 @@ entity MEM_16ADD_vlg_sample_tst is
         a3              : in     vl_logic;
         clk             : in     vl_logic;
         data_in         : in     vl_logic_vector(7 downto 0);
-        read            : in     vl_logic;
         write           : in     vl_logic;
         sampler_tx      : out    vl_logic
     );

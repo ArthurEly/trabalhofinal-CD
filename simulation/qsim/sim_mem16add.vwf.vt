@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/27/2023 13:17:25"
+// Generated on "03/27/2023 15:16:44"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    MEM_16ADD
 // 
@@ -33,7 +33,6 @@ module MEM_16ADD_vlg_sample_tst(
 	a3,
 	clk,
 	data_in,
-	read,
 	write,
 	sampler_tx
 );
@@ -43,13 +42,12 @@ input  a2;
 input  a3;
 input  clk;
 input [7:0] data_in;
-input  read;
 input  write;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(a0 or a1 or a2 or a3 or clk or data_in or read or write)
+always @(a0 or a1 or a2 or a3 or clk or data_in or write)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -297,7 +295,6 @@ reg a2;
 reg a3;
 reg clk;
 reg [7:0] data_in;
-reg read;
 reg write;
 // wires                                               
 wire [7:0] data_out;
@@ -314,7 +311,6 @@ MEM_16ADD i1 (
 	.clk(clk),
 	.data_in(data_in),
 	.data_out(data_out),
-	.read(read),
 	.write(write)
 );
 
@@ -378,12 +374,6 @@ begin
 	write = #280000 1'b1;
 	write = #20000 1'b0;
 end 
-
-// read
-initial
-begin
-	read = 1'b1;
-end 
 // data_in[ 7 ]
 initial
 begin
@@ -439,7 +429,6 @@ MEM_16ADD_vlg_sample_tst tb_sample (
 	.a3(a3),
 	.clk(clk),
 	.data_in(data_in),
-	.read(read),
 	.write(write),
 	.sampler_tx(sampler)
 );
