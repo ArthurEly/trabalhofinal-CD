@@ -3,8 +3,7 @@ use verilog.vl_types.all;
 entity trabalhofinal_vlg_sample_tst is
     port(
         clk             : in     vl_logic;
-        confirm_address : in     vl_logic;
-        confirm_data    : in     vl_logic;
+        confirm_sw      : in     vl_logic;
         read            : in     vl_logic;
         sw0             : in     vl_logic;
         sw1             : in     vl_logic;

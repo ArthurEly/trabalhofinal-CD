@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/01/2023 14:38:08"
+// Generated on "04/01/2023 16:22:42"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    trabalhofinal
 // 
@@ -28,8 +28,7 @@
 `timescale 1 ps/ 1 ps
 module trabalhofinal_vlg_sample_tst(
 	clk,
-	confirm_address,
-	confirm_data,
+	confirm_sw,
 	read,
 	sw0,
 	sw1,
@@ -45,8 +44,7 @@ module trabalhofinal_vlg_sample_tst(
 	sampler_tx
 );
 input  clk;
-input  confirm_address;
-input  confirm_data;
+input  confirm_sw;
 input  read;
 input  sw0;
 input  sw1;
@@ -63,7 +61,7 @@ output sampler_tx;
 
 reg sample;
 time current_time;
-always @(clk or confirm_address or confirm_data or read or sw0 or sw1 or sw2 or sw3 or sw4 or sw5 or sw6 or sw7 or sw8 or sw9 or write)
+always @(clk or confirm_sw or read or sw0 or sw1 or sw2 or sw3 or sw4 or sw5 or sw6 or sw7 or sw8 or sw9 or write)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -762,8 +760,7 @@ module trabalhofinal_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
-reg confirm_address;
-reg confirm_data;
+reg confirm_sw;
 reg read;
 reg sw0;
 reg sw1;
@@ -789,8 +786,7 @@ trabalhofinal i1 (
 // port map - connection between master ports and signals/registers   
 	.address_reg_out(address_reg_out),
 	.clk(clk),
-	.confirm_address(confirm_address),
-	.confirm_data(confirm_data),
+	.confirm_sw(confirm_sw),
 	.data_out(data_out),
 	.data_reg_out(data_reg_out),
 	.morte(morte),
@@ -878,24 +874,14 @@ begin
 	#10000;
 end 
 
-// confirm_address
+// confirm_sw
 initial
 begin
-	confirm_address = 1'b0;
-	confirm_address = #40000 1'b1;
-	confirm_address = #30000 1'b0;
-	confirm_address = #560000 1'b1;
-	confirm_address = #30000 1'b0;
-end 
-
-// confirm_data
-initial
-begin
-	confirm_data = 1'b0;
-	confirm_data = #90000 1'b1;
-	confirm_data = #60000 1'b0;
-	confirm_data = #590000 1'b1;
-	confirm_data = #50000 1'b0;
+	confirm_sw = 1'b0;
+	confirm_sw = #220000 1'b1;
+	confirm_sw = #80000 1'b0;
+	confirm_sw = #300000 1'b1;
+	confirm_sw = #100000 1'b0;
 end 
 
 // write
@@ -918,8 +904,7 @@ end
 
 trabalhofinal_vlg_sample_tst tb_sample (
 	.clk(clk),
-	.confirm_address(confirm_address),
-	.confirm_data(confirm_data),
+	.confirm_sw(confirm_sw),
 	.read(read),
 	.sw0(sw0),
 	.sw1(sw1),

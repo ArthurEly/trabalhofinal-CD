@@ -5,7 +5,7 @@ entity trabalhofinal is
         address_reg_out : out    vl_logic_vector(7 downto 0);
         sw9             : in     vl_logic;
         sw8             : in     vl_logic;
-        confirm_address : in     vl_logic;
+        confirm_sw      : in     vl_logic;
         clk             : in     vl_logic;
         sw0             : in     vl_logic;
         sw1             : in     vl_logic;
@@ -18,7 +18,6 @@ entity trabalhofinal is
         data_out        : out    vl_logic_vector(7 downto 0);
         read            : in     vl_logic;
         write           : in     vl_logic;
-        confirm_data    : in     vl_logic;
         data_reg_out    : out    vl_logic_vector(7 downto 0);
         morte           : out    vl_logic_vector(7 downto 0)
     );
