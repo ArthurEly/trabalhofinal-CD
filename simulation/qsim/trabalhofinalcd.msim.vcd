@@ -3,7 +3,7 @@ $comment
 		vcd file trabalhofinalcd.msim.vcd -direction
 $end
 $date
-	Sat Apr 01 14:26:48 2023
+	Sat Apr 01 14:38:11 2023
 $end
 $version
 	ModelSim Version 10.1d
