@@ -66,15 +66,19 @@ set_location_assignment PIN_E3 -to sw7
 set_location_assignment PIN_E4 -to sw8
 set_location_assignment PIN_D2 -to sw9
 set_location_assignment PIN_F1 -to confirm_sw
-set_global_assignment -name BDF_FILE ../display/name_top.bdf
-set_global_assignment -name BDF_FILE ../display/ledG.bdf
-set_global_assignment -name BDF_FILE ../display/ledF.bdf
-set_global_assignment -name BDF_FILE ../display/ledE.bdf
-set_global_assignment -name BDF_FILE ../display/ledD.bdf
-set_global_assignment -name BDF_FILE ../display/ledC.bdf
-set_global_assignment -name BDF_FILE ../display/ledB.bdf
-set_global_assignment -name BDF_FILE ../display/ledA.bdf
-set_global_assignment -name BDF_FILE ../display/decoddisplay.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE display/name_top.bdf
+set_global_assignment -name BDF_FILE display/ledG.bdf
+set_global_assignment -name BDF_FILE display/ledF.bdf
+set_global_assignment -name BDF_FILE display/ledE.bdf
+set_global_assignment -name BDF_FILE display/ledD.bdf
+set_global_assignment -name BDF_FILE display/ledC.bdf
+set_global_assignment -name BDF_FILE display/ledB.bdf
+set_global_assignment -name BDF_FILE display/ledA.bdf
+set_global_assignment -name BDF_FILE display/decoddisplay.bdf
 set_global_assignment -name BDF_FILE decod4x16.bdf
 set_global_assignment -name BDF_FILE decod2x4.bdf
 set_global_assignment -name BDF_FILE REG_1BYTE.bdf
@@ -88,8 +92,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE sim_mem16add.vwf
 set_global_assignment -name BDF_FILE trabalhofinal.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_trabalhofinal.vwf
 set_global_assignment -name BDF_FILE controlevisor.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE ../display/Waveform.vwf
