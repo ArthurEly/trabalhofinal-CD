@@ -1,5 +1,5 @@
 EDA Netlist Writer report for trabalhofinalcd
-Sat Apr 01 16:22:44 2023
+Tue Apr 04 16:53:12 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Apr 01 16:22:44 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 04 16:53:11 2023 ;
 ; Revision Name             ; trabalhofinalcd                       ;
-; Top-level Entity Name     ; trabalhofinal                         ;
+; Top-level Entity Name     ; controlevisor                         ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -50,8 +50,7 @@ applicable agreement for further details.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; Off                       ;
-; Time scale                                                                                        ; 1 ps                      ;
+; Generate netlist for functional simulation only                                                   ; On                        ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -66,20 +65,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                      ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                 ;
-+---------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_6_1200mv_85c_slow.vo     ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_6_1200mv_0c_slow.vo      ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_min_1200mv_0c_fast.vo    ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd.vo                       ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//trabalhofinalcd_v.sdo                    ;
-+---------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Simulation Generated Files                                          ;
++---------------------------------------------------------------------+
+; Generated Files                                                     ;
++---------------------------------------------------------------------+
+; C:/altera/13.1/trabalhofinal-CD/simulation/qsim//trabalhofinalcd.vo ;
++---------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -101,20 +93,13 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Sat Apr 01 16:22:43 2023
-Info: Command: quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-Info (204019): Generated file trabalhofinalcd_6_1200mv_85c_slow.vo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_6_1200mv_0c_slow.vo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_min_1200mv_0c_fast.vo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd.vo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_6_1200mv_85c_v_slow.sdo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_6_1200mv_0c_v_slow.sdo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_min_1200mv_0c_v_fast.sdo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file trabalhofinalcd_v.sdo in folder "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Tue Apr 04 16:53:10 2023
+Info: Command: quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/altera/13.1/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
+Info (204019): Generated file trabalhofinalcd.vo in folder "C:/altera/13.1/trabalhofinal-CD/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4566 megabytes
-    Info: Processing ended: Sat Apr 01 16:22:44 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4537 megabytes
+    Info: Processing ended: Tue Apr 04 16:53:12 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
