@@ -1876,57 +1876,28 @@ applicable agreement for further details.
 	(pt 1408 1232)
 )
 (connector
-	(pt 1032 608)
-	(pt 1032 856)
-)
-(connector
-	(pt 1032 856)
-	(pt 1032 1232)
-)
-(connector
 	(text "address_out[3]" (rect 1336 912 1409 924)(font "Arial" ))
+	(pt 1328 928)
 	(pt 1408 928)
-	(pt 1328 928)
-)
-(connector
-	(text "address_out[7..0]" (rect 1312 845 1324 931)(font "Arial" )(vertical))
-	(pt 1328 592)
-	(pt 1328 928)
-	(bus)
 )
 (connector
 	(text "address_out[2]" (rect 1336 928 1409 940)(font "Arial" ))
+	(pt 1328 944)
 	(pt 1408 944)
-	(pt 1328 944)
-)
-(connector
-	(pt 1328 928)
-	(pt 1328 944)
-	(bus)
 )
 (connector
 	(text "address_out[1]" (rect 1336 944 1409 956)(font "Arial" ))
+	(pt 1328 960)
 	(pt 1408 960)
-	(pt 1328 960)
-)
-(connector
-	(pt 1328 944)
-	(pt 1328 960)
-	(bus)
-)
-(connector
-	(pt 1328 960)
-	(pt 1328 976)
-	(bus)
 )
 (connector
 	(text "address_out[0]" (rect 1336 960 1409 972)(font "Arial" ))
-	(pt 1408 976)
 	(pt 1328 976)
+	(pt 1408 976)
 )
 (connector
-	(pt 1408 1160)
 	(pt 1344 1160)
+	(pt 1408 1160)
 )
 (connector
 	(pt 1376 488)
@@ -1936,6 +1907,27 @@ applicable agreement for further details.
 (connector
 	(pt 1376 1096)
 	(pt 1408 1096)
+	(bus)
+)
+(connector
+	(pt 1752 896)
+	(pt 1752 936)
+	(bus)
+)
+(connector
+	(pt 1752 936)
+	(pt 1736 936)
+	(bus)
+)
+(connector
+	(text "address_out[7..0]" (rect 1312 845 1324 931)(font "Arial" )(vertical))
+	(pt 1328 592)
+	(pt 1328 928)
+	(bus)
+)
+(connector
+	(pt 1328 928)
+	(pt 1328 944)
 	(bus)
 )
 (connector
@@ -1949,13 +1941,21 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1752 896)
-	(pt 1752 936)
+	(pt 1032 608)
+	(pt 1032 856)
+)
+(connector
+	(pt 1032 856)
+	(pt 1032 1232)
+)
+(connector
+	(pt 1328 944)
+	(pt 1328 960)
 	(bus)
 )
 (connector
-	(pt 1736 936)
-	(pt 1752 936)
+	(pt 1328 960)
+	(pt 1328 976)
 	(bus)
 )
 (junction (pt 616 520))

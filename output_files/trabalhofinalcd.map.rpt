@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trabalhofinalcd
-Wed Apr 05 01:41:23 2023
+Wed Apr 05 10:46:41 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 05 01:41:23 2023      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 05 10:46:41 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
 ; Top-level Entity Name              ; trabalhofinal_swap                         ;
@@ -146,40 +146,34 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
-; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod4x16.bdf          ;         ;
-; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod2x4.bdf           ;         ;
-; REG_1BYTE.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE.bdf          ;         ;
-; REG_1BIT.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT.bdf           ;         ;
-; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux16busx1.bdf         ;         ;
-; MEM_16ADD_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MEM_16ADD_SWAP.bdf     ;         ;
-; REG_1BYTE_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE_SWAP.bdf     ;         ;
-; REG_1BIT_SWAP.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT_SWAP.bdf      ;         ;
-; trabalhofinal_swap.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/trabalhofinal_swap.bdf ;         ;
-; 21mux.bdf                        ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/21mux.bdf                                       ;         ;
-; 161mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/161mux.bdf                                      ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
+; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/decod4x16.bdf               ;         ;
+; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/decod2x4.bdf                ;         ;
+; REG_1BYTE.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/REG_1BYTE.bdf               ;         ;
+; REG_1BIT.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/REG_1BIT.bdf                ;         ;
+; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/mux16busx1.bdf              ;         ;
+; MEM_16ADD_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/MEM_16ADD_SWAP.bdf          ;         ;
+; REG_1BYTE_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/REG_1BYTE_SWAP.bdf          ;         ;
+; REG_1BIT_SWAP.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/REG_1BIT_SWAP.bdf           ;         ;
+; trabalhofinal_swap.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/trabalhofinal_swap.bdf      ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/21mux.bdf  ;         ;
+; 161mux.bdf                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/others/maxplus2/161mux.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -439,7 +433,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -449,9 +443,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 05 01:41:15 2023
+    Info: Processing started: Wed Apr 05 10:46:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file display/name_top.bdf
     Info (12023): Found entity 1: name_top
 Info (12021): Found 1 design units, including 1 entities, in source file display/ledg.bdf
@@ -517,10 +511,10 @@ Info (21057): Implemented 293 device resources after synthesis - the final resou
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 247 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Wed Apr 05 01:41:23 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Wed Apr 05 10:46:41 2023
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:21
 
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for trabalhofinalcd
-Wed Apr 05 01:41:37 2023
+Wed Apr 05 10:47:10 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -102,21 +102,15 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -321,8 +315,8 @@ No paths to report.
 ; 0.877 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.419      ; 1.453      ;
 ; 0.879 ; REG_1BYTE:DATA_REG|REG_1BIT:inst12|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6|inst2 ; clk          ; clk         ; 0.000        ; 0.077      ; 1.113      ;
 ; 0.888 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7|inst2 ; clk          ; clk         ; 0.000        ; 0.421      ; 1.466      ;
-; 0.893 ; REG_1BYTE:DATA_REG|REG_1BIT:inst10|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 0.000        ; 0.421      ; 1.471      ;
 ; 0.893 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst|inst2                           ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.061      ; 1.111      ;
+; 0.893 ; REG_1BYTE:DATA_REG|REG_1BIT:inst10|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 0.000        ; 0.421      ; 1.471      ;
 ; 0.896 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10|inst2                         ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst8|inst2                         ; clk          ; clk         ; 0.000        ; 0.061      ; 1.114      ;
 ; 0.905 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.061      ; 1.123      ;
 ; 0.907 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10|inst2                         ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10|inst2                        ; clk          ; clk         ; 0.000        ; 0.061      ; 1.125      ;
@@ -334,12 +328,12 @@ No paths to report.
 ; 0.949 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.054      ; 1.160      ;
 ; 0.980 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.439      ; 1.576      ;
 ; 0.985 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10|inst2                        ; clk          ; clk         ; 0.000        ; 0.061      ; 1.203      ;
-; 0.987 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.054      ; 1.198      ;
 ; 0.987 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 0.000        ; 0.436      ; 1.580      ;
+; 0.987 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.054      ; 1.198      ;
 ; 0.989 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5|inst2  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.226      ;
 ; 0.998 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 0.000        ; 0.439      ; 1.594      ;
-; 0.999 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2|inst2  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.236      ;
 ; 0.999 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.104      ; 1.260      ;
+; 0.999 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2|inst2  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.236      ;
 ; 1.005 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.396      ; 1.558      ;
 ; 1.007 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.054      ; 1.218      ;
 ; 1.024 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst2|inst2 ; clk          ; clk         ; 0.000        ; 0.083      ; 1.264      ;
@@ -832,8 +826,8 @@ No paths to report.
 ; 0.810 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.377      ; 1.331      ;
 ; 0.812 ; REG_1BYTE:DATA_REG|REG_1BIT:inst12|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6|inst2 ; clk          ; clk         ; 0.000        ; 0.060      ; 1.016      ;
 ; 0.812 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.371      ; 1.327      ;
-; 0.813 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11|inst2                        ; clk          ; clk         ; 0.000        ; 0.392      ; 1.349      ;
 ; 0.813 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10|inst2                         ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10|inst2                        ; clk          ; clk         ; 0.000        ; 0.055      ; 1.012      ;
+; 0.813 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11|inst2                        ; clk          ; clk         ; 0.000        ; 0.392      ; 1.349      ;
 ; 0.823 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7|inst2 ; clk          ; clk         ; 0.000        ; 0.375      ; 1.342      ;
 ; 0.829 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst7|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 0.000        ; 0.398      ; 1.371      ;
 ; 0.831 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2|inst2  ; clk          ; clk         ; 0.000        ; 0.052      ; 1.027      ;
@@ -857,8 +851,8 @@ No paths to report.
 ; 0.947 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.164      ;
 ; 0.947 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.163      ;
 ; 0.948 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.165      ;
-; 0.952 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.169      ;
 ; 0.952 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.391      ; 1.487      ;
+; 0.952 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.073      ; 1.169      ;
 ; 0.959 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst8|inst2  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.175      ;
 ; 0.961 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.072      ; 1.177      ;
 ; 0.971 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.187      ;
@@ -1253,8 +1247,8 @@ No paths to report.
 ; -0.635 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 1.000        ; -0.032     ; 1.590      ;
 ; -0.635 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst7|inst2 ; clk          ; clk         ; 1.000        ; -0.032     ; 1.590      ;
 ; -0.635 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 1.000        ; -0.032     ; 1.590      ;
-; -0.633 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 1.000        ; 0.157      ; 1.777      ;
 ; -0.633 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst1|inst2  ; clk          ; clk         ; 1.000        ; -0.047     ; 1.573      ;
+; -0.633 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 1.000        ; 0.157      ; 1.777      ;
 ; -0.629 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10|inst2                         ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 1.000        ; 0.142      ; 1.758      ;
 ; -0.618 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 1.000        ; 0.142      ; 1.747      ;
 ; -0.618 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst5|inst2  ; clk          ; clk         ; 1.000        ; 0.142      ; 1.747      ;
@@ -1336,15 +1330,15 @@ No paths to report.
 ; 0.482 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst|inst2                           ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.602      ;
 ; 0.483 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.227      ; 0.794      ;
 ; 0.484 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10|inst2                         ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10|inst2                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.604      ;
-; 0.485 ; REG_1BYTE:DATA_REG|REG_1BIT:inst10|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 0.000        ; 0.229      ; 0.798      ;
 ; 0.485 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.036      ; 0.605      ;
+; 0.485 ; REG_1BYTE:DATA_REG|REG_1BIT:inst10|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 0.000        ; 0.229      ; 0.798      ;
 ; 0.495 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2|inst2  ; clk          ; clk         ; 0.000        ; 0.031      ; 0.610      ;
 ; 0.518 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.239      ; 0.841      ;
 ; 0.520 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10|inst2                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.640      ;
 ; 0.522 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 0.000        ; 0.241      ; 0.847      ;
 ; 0.526 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.058      ; 0.668      ;
-; 0.531 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.644      ;
 ; 0.531 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13|inst2                        ; clk          ; clk         ; 0.000        ; 0.239      ; 0.854      ;
+; 0.531 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.644      ;
 ; 0.543 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5|inst2  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.672      ;
 ; 0.545 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3|inst2  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.658      ;
 ; 0.546 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2|inst2  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.675      ;
@@ -1353,8 +1347,8 @@ No paths to report.
 ; 0.556 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.686      ;
 ; 0.558 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.048      ; 0.690      ;
 ; 0.559 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.689      ;
-; 0.564 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.691      ;
 ; 0.564 ; REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9|inst2                          ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.239      ; 0.887      ;
+; 0.564 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.691      ;
 ; 0.569 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7|inst2  ; clk          ; clk         ; 0.000        ; 0.045      ; 0.698      ;
 ; 0.572 ; REG_1BYTE:DATA_REG|REG_1BIT:inst|inst2                              ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst1|inst2 ; clk          ; clk         ; 0.000        ; 0.232      ; 0.888      ;
 ; 0.572 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.047      ; 0.703      ;
@@ -1375,12 +1369,12 @@ No paths to report.
 ; 0.602 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2   ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14|inst2                        ; clk          ; clk         ; 0.000        ; 0.235      ; 0.921      ;
 ; 0.608 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.738      ;
 ; 0.608 ; REG_1BYTE:DATA_REG|REG_1BIT:inst10|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst4|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.735      ;
+; 0.609 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11|inst2                        ; clk          ; clk         ; 0.000        ; 0.241      ; 0.934      ;
 ; 0.609 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.736      ;
 ; 0.609 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.736      ;
-; 0.609 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11|inst2                        ; clk          ; clk         ; 0.000        ; 0.241      ; 0.934      ;
+; 0.611 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.034      ; 0.729      ;
 ; 0.611 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.741      ;
 ; 0.611 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.741      ;
-; 0.611 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3|inst2  ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9|inst2                         ; clk          ; clk         ; 0.000        ; 0.034      ; 0.729      ;
 ; 0.613 ; REG_1BYTE:DATA_REG|REG_1BIT:inst9|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst3|inst2 ; clk          ; clk         ; 0.000        ; 0.047      ; 0.744      ;
 ; 0.616 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst5|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11|inst2                        ; clk          ; clk         ; 0.000        ; 0.237      ; 0.937      ;
 ; 0.618 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.044      ; 0.746      ;
@@ -1399,8 +1393,8 @@ No paths to report.
 ; 0.628 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst7|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.758      ;
 ; 0.628 ; REG_1BYTE:DATA_REG|REG_1BIT:inst13|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst7|inst2 ; clk          ; clk         ; 0.000        ; 0.046      ; 0.758      ;
 ; 0.629 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5|inst2  ; clk          ; clk         ; 0.000        ; 0.029      ; 0.742      ;
-; 0.631 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.758      ;
 ; 0.631 ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst6|inst2 ; REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst12|inst2                        ; clk          ; clk         ; 0.000        ; 0.036      ; 0.751      ;
+; 0.631 ; REG_1BYTE:DATA_REG|REG_1BIT:inst11|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5|inst2 ; clk          ; clk         ; 0.000        ; 0.043      ; 0.758      ;
 ; 0.634 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst8|inst2  ; clk          ; clk         ; 0.000        ; 0.046      ; 0.764      ;
 ; 0.635 ; REG_1BYTE:DATA_REG|REG_1BIT:inst14|inst2                            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst8|inst2 ; clk          ; clk         ; 0.000        ; 0.044      ; 0.763      ;
 ; 0.637 ; REG_1BYTE:DATA_REG|REG_1BIT:inst8|inst2                             ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst2|inst2 ; clk          ; clk         ; 0.000        ; 0.044      ; 0.765      ;
@@ -1996,10 +1990,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 05 01:41:35 2023
+    Info: Processing started: Wed Apr 05 10:47:06 2023
 Info: Command: quartus_sta trabalhofinalcd -c trabalhofinalcd
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2067,10 +2061,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000            -156.586 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4708 megabytes
-    Info: Processing ended: Wed Apr 05 01:41:37 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Wed Apr 05 10:47:10 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
