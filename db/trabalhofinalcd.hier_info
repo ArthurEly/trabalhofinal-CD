@@ -1,4 +1,14 @@
 |trabalhofinal_swap
+loadregis <= MAQUINA_B:inst23.B_LOAD_REG
+clk => MAQUINA_B:inst23.clk
+clk => REG_1BYTE:ADDRESS_REG.clk
+clk => REG_1BYTE:DATA_OUT_REG.clk
+clk => MEM_16ADD_SWAP:inst.clk
+clk => REG_1BYTE:DATA_REG.clk
+confirm_sw => MAQUINA_B:inst23.confirmaDA
+confirmaFuncao => MAQUINA_B:inst23.confirmaFuncao
+readmem <= MAQUINA_B:inst23.READ_MEM
+estado <= MAQUINA_B:inst23.estado
 address_reg_out[0] <= address_out[0].DB_MAX_OUTPUT_PORT_TYPE
 address_reg_out[1] <= address_out[1].DB_MAX_OUTPUT_PORT_TYPE
 address_reg_out[2] <= address_out[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -11,12 +21,6 @@ sw9 => inst2.IN0
 sw9 => inst1.IN0
 sw8 => inst2.IN1
 sw8 => inst1.IN1
-confirm_sw => inst20.IN1
-confirm_sw => inst19.IN1
-clk => REG_1BYTE:ADDRESS_REG.clk
-clk => REG_1BYTE:DATA_OUT_REG.clk
-clk => MEM_16ADD_SWAP:inst.clk
-clk => REG_1BYTE:DATA_REG.clk
 sw0 => inst3.IN0
 sw0 => inst11.IN0
 sw1 => inst4.IN0
@@ -41,7 +45,6 @@ data_out[4] <= REG_1BYTE:DATA_OUT_REG.out[4]
 data_out[5] <= REG_1BYTE:DATA_OUT_REG.out[5]
 data_out[6] <= REG_1BYTE:DATA_OUT_REG.out[6]
 data_out[7] <= REG_1BYTE:DATA_OUT_REG.out[7]
-read => REG_1BYTE:DATA_OUT_REG.write
 write => MEM_16ADD_SWAP:inst.write_address_down
 data_reg_out[0] <= REG_1BYTE:DATA_REG.out[0]
 data_reg_out[1] <= REG_1BYTE:DATA_REG.out[1]
@@ -59,6 +62,19 @@ morte[4] <= MEM_16ADD_SWAP:inst.data_out_down[4]
 morte[5] <= MEM_16ADD_SWAP:inst.data_out_down[5]
 morte[6] <= MEM_16ADD_SWAP:inst.data_out_down[6]
 morte[7] <= MEM_16ADD_SWAP:inst.data_out_down[7]
+
+
+|trabalhofinal_swap|MAQUINA_B:inst23
+habilita_count <= inst.DB_MAX_OUTPUT_PORT_TYPE
+confirmaFuncao => inst5.IN1
+confirmaFuncao => inst3.IN1
+clk => inst1.CLK
+READ_MEM <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+B_VISOR_OK <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B_VISOR_MSG <= inst.DB_MAX_OUTPUT_PORT_TYPE
+estado <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B_LOAD_REG <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+confirmaDA => inst2.IN1
 
 
 |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG
