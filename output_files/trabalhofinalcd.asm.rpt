@@ -1,5 +1,5 @@
 Assembler report for trabalhofinalcd
-Tue Apr 04 16:50:07 2023
+Wed Apr 05 01:41:34 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/altera/13.1/trabalhofinal-CD/output_files/trabalhofinalcd.sof
+  5. Assembler Device Options: C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/output_files/trabalhofinalcd.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Apr 04 16:50:07 2023 ;
+; Assembler Status      ; Successful - Wed Apr 05 01:41:34 2023 ;
 ; Revision Name         ; trabalhofinalcd                       ;
-; Top-level Entity Name ; controlevisor                         ;
+; Top-level Entity Name ; trabalhofinal_swap                    ;
 ; Family                ; Cyclone III                           ;
 ; Device                ; EP3C16U484C6                          ;
 +-----------------------+---------------------------------------+
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------+
-; Assembler Generated Files                                        ;
-+------------------------------------------------------------------+
-; File Name                                                        ;
-+------------------------------------------------------------------+
-; C:/altera/13.1/trabalhofinal-CD/output_files/trabalhofinalcd.sof ;
-+------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                              ;
++--------------------------------------------------------------------------------------------------------+
+; File Name                                                                                              ;
++--------------------------------------------------------------------------------------------------------+
+; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/output_files/trabalhofinalcd.sof ;
++--------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/altera/13.1/trabalhofinal-CD/output_files/trabalhofinalcd.sof ;
-+----------------+---------------------------------------------------------------------------+
-; Option         ; Setting                                                                   ;
-+----------------+---------------------------------------------------------------------------+
-; Device         ; EP3C16U484C6                                                              ;
-; JTAG usercode  ; 0x000C96FD                                                                ;
-; Checksum       ; 0x000C96FD                                                                ;
-+----------------+---------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/output_files/trabalhofinalcd.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                         ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
+; Device         ; EP3C16U484C6                                                                                                    ;
+; JTAG usercode  ; 0x000E682C                                                                                                      ;
+; Checksum       ; 0x000E682C                                                                                                      ;
++----------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Apr 04 16:50:05 2023
+    Info: Processing started: Wed Apr 05 01:41:32 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4568 megabytes
-    Info: Processing ended: Tue Apr 04 16:50:07 2023
+    Info: Peak virtual memory: 4594 megabytes
+    Info: Processing ended: Wed Apr 05 01:41:34 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

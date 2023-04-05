@@ -1140,7 +1140,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 48 -344 312 -216)
+	(rect 224 -264 488 -136)
 	(text "controlevisor" (rect 5 0 79 14)(font "Arial" (font_size 8)))
 	(text "inst21" (rect 8 112 37 124)(font "Arial" ))
 	(port
@@ -1183,7 +1183,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 840 -592 960 -464)
+	(rect 1016 -512 1136 -384)
 	(text "decoddisplay" (rect 5 0 80 14)(font "Arial" (font_size 8)))
 	(text "MAIS" (rect 8 112 33 124)(font "Arial" ))
 	(port
@@ -1226,7 +1226,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 840 -448 960 -320)
+	(rect 1016 -368 1136 -240)
 	(text "decoddisplay" (rect 5 0 80 14)(font "Arial" (font_size 8)))
 	(text "MENOS" (rect 8 112 46 124)(font "Arial" ))
 	(port
@@ -1269,7 +1269,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 456 -360 672 -256)
+	(rect 632 -280 848 -176)
 	(text "REG_1BYTE" (rect 5 0 75 14)(font "Arial" (font_size 8)))
 	(text "VISOR_REG" (rect 8 80 71 92)(font "Arial" ))
 	(port
@@ -1978,93 +1978,6 @@ applicable agreement for further details.
 	(pt -200 -152)
 )
 (connector
-	(pt 312 -312)
-	(pt 456 -312)
-	(bus)
-)
-(connector
-	(pt 840 -560)
-	(pt 712 -560)
-)
-(connector
-	(pt 840 -544)
-	(pt 712 -544)
-)
-(connector
-	(pt 712 -560)
-	(pt 712 -544)
-	(bus)
-)
-(connector
-	(pt 840 -528)
-	(pt 712 -528)
-)
-(connector
-	(pt 712 -544)
-	(pt 712 -528)
-	(bus)
-)
-(connector
-	(pt 840 -512)
-	(pt 712 -512)
-)
-(connector
-	(pt 712 -528)
-	(pt 712 -512)
-	(bus)
-)
-(connector
-	(text "out[7..0]" (rect 682 -328 723 -316)(font "Arial" ))
-	(pt 672 -312)
-	(pt 712 -312)
-	(bus)
-)
-(connector
-	(text "out[1]" (rect 722 -400 750 -388)(font "Arial" ))
-	(pt 712 -384)
-	(pt 840 -384)
-)
-(connector
-	(text "out[0]" (rect 722 -384 750 -372)(font "Arial" ))
-	(pt 712 -368)
-	(pt 840 -368)
-)
-(connector
-	(pt 712 -512)
-	(pt 712 -416)
-	(bus)
-)
-(connector
-	(pt 712 -416)
-	(pt 712 -400)
-	(bus)
-)
-(connector
-	(pt 712 -400)
-	(pt 712 -384)
-	(bus)
-)
-(connector
-	(pt 712 -384)
-	(pt 712 -368)
-	(bus)
-)
-(connector
-	(pt 712 -368)
-	(pt 712 -312)
-	(bus)
-)
-(connector
-	(text "out[2]" (rect 722 -416 750 -404)(font "Arial" ))
-	(pt 712 -400)
-	(pt 840 -400)
-)
-(connector
-	(text "out[3]" (rect 722 -432 750 -420)(font "Arial" ))
-	(pt 712 -416)
-	(pt 840 -416)
-)
-(connector
 	(pt -72 472)
 	(pt 304 472)
 )
@@ -2151,6 +2064,93 @@ applicable agreement for further details.
 	(pt -72 416)
 	(pt -72 472)
 )
+(connector
+	(pt 488 -232)
+	(pt 632 -232)
+	(bus)
+)
+(connector
+	(text "out[7..0]" (rect 858 -248 899 -236)(font "Arial" ))
+	(pt 848 -232)
+	(pt 888 -232)
+	(bus)
+)
+(connector
+	(text "out[1]" (rect 898 -320 926 -308)(font "Arial" ))
+	(pt 888 -304)
+	(pt 1016 -304)
+)
+(connector
+	(text "out[0]" (rect 898 -304 926 -292)(font "Arial" ))
+	(pt 888 -288)
+	(pt 1016 -288)
+)
+(connector
+	(text "out[2]" (rect 898 -336 926 -324)(font "Arial" ))
+	(pt 888 -320)
+	(pt 1016 -320)
+)
+(connector
+	(text "out[3]" (rect 898 -352 926 -340)(font "Arial" ))
+	(pt 888 -336)
+	(pt 1016 -336)
+)
+(connector
+	(pt 1016 -432)
+	(pt 888 -432)
+)
+(connector
+	(pt 1016 -448)
+	(pt 888 -448)
+)
+(connector
+	(pt 1016 -464)
+	(pt 888 -464)
+)
+(connector
+	(pt 1016 -480)
+	(pt 888 -480)
+)
+(connector
+	(pt 888 -304)
+	(pt 888 -288)
+	(bus)
+)
+(connector
+	(pt 888 -288)
+	(pt 888 -232)
+	(bus)
+)
+(connector
+	(pt 888 -320)
+	(pt 888 -304)
+	(bus)
+)
+(connector
+	(pt 888 -336)
+	(pt 888 -320)
+	(bus)
+)
+(connector
+	(pt 888 -480)
+	(pt 888 -464)
+	(bus)
+)
+(connector
+	(pt 888 -464)
+	(pt 888 -448)
+	(bus)
+)
+(connector
+	(pt 888 -448)
+	(pt 888 -432)
+	(bus)
+)
+(connector
+	(pt 888 -432)
+	(pt 888 -336)
+	(bus)
+)
 (junction (pt -72 64))
 (junction (pt 248 520))
 (junction (pt 248 504))
@@ -2203,10 +2203,10 @@ applicable agreement for further details.
 (junction (pt -336 152))
 (junction (pt -368 504))
 (junction (pt -200 24))
-(junction (pt 712 -368))
-(junction (pt 712 -384))
-(junction (pt 712 -400))
-(junction (pt 712 -416))
-(junction (pt 712 -544))
-(junction (pt 712 -528))
-(junction (pt 712 -512))
+(junction (pt 888 -304))
+(junction (pt 888 -320))
+(junction (pt 888 -288))
+(junction (pt 888 -336))
+(junction (pt 888 -432))
+(junction (pt 888 -464))
+(junction (pt 888 -448))

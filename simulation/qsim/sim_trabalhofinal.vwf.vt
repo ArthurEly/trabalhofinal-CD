@@ -18,15 +18,15 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/01/2023 16:22:42"
+// Generated on "04/05/2023 01:41:58"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    trabalhofinal
+// Verilog Self-Checking Test Bench (with test vectors) for design :    trabalhofinal_swap
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module trabalhofinal_vlg_sample_tst(
+module trabalhofinal_swap_vlg_sample_tst(
 	clk,
 	confirm_sw,
 	read,
@@ -80,7 +80,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module trabalhofinal_vlg_check_tst (
+module trabalhofinal_swap_vlg_check_tst (
 	address_reg_out,
 	data_out,
 	data_reg_out,
@@ -756,7 +756,7 @@ $finish;
 end 
 endmodule
 
-module trabalhofinal_vlg_vec_tst();
+module trabalhofinal_swap_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
@@ -782,7 +782,7 @@ wire [7:0] morte;
 wire sampler;                             
 
 // assign statements (if any)                          
-trabalhofinal i1 (
+trabalhofinal_swap i1 (
 // port map - connection between master ports and signals/registers   
 	.address_reg_out(address_reg_out),
 	.clk(clk),
@@ -902,7 +902,7 @@ begin
 	read = #20000 1'b0;
 end 
 
-trabalhofinal_vlg_sample_tst tb_sample (
+trabalhofinal_swap_vlg_sample_tst tb_sample (
 	.clk(clk),
 	.confirm_sw(confirm_sw),
 	.read(read),
@@ -920,7 +920,7 @@ trabalhofinal_vlg_sample_tst tb_sample (
 	.sampler_tx(sampler)
 );
 
-trabalhofinal_vlg_check_tst tb_out(
+trabalhofinal_swap_vlg_check_tst tb_out(
 	.address_reg_out(address_reg_out),
 	.data_out(data_out),
 	.data_reg_out(data_reg_out),

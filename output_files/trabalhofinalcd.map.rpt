@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trabalhofinalcd
-Tue Apr 04 16:49:44 2023
+Wed Apr 05 01:41:23 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,9 +13,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +42,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 04 16:49:44 2023      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 05 01:41:23 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
-; Top-level Entity Name              ; controlevisor                              ;
+; Top-level Entity Name              ; trabalhofinal_swap                         ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 8                                          ;
-;     Total combinational functions  ; 8                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 26                                         ;
+; Total logic elements               ; 239                                        ;
+;     Total combinational functions  ; 103                                        ;
+;     Dedicated logic registers      ; 145                                        ;
+; Total registers                    ; 145                                        ;
+; Total pins                         ; 46                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -64,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16U484C6       ;                    ;
-; Top-level entity name                                                      ; controlevisor      ; trabalhofinalcd    ;
+; Top-level entity name                                                      ; trabalhofinal_swap ; trabalhofinalcd    ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -145,24 +146,40 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
-; controlevisor.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/trabalhofinal-CD/controlevisor.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod4x16.bdf          ;         ;
+; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod2x4.bdf           ;         ;
+; REG_1BYTE.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE.bdf          ;         ;
+; REG_1BIT.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT.bdf           ;         ;
+; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux16busx1.bdf         ;         ;
+; MEM_16ADD_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MEM_16ADD_SWAP.bdf     ;         ;
+; REG_1BYTE_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE_SWAP.bdf     ;         ;
+; REG_1BIT_SWAP.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT_SWAP.bdf      ;         ;
+; trabalhofinal_swap.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/trabalhofinal_swap.bdf ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/21mux.bdf                                       ;         ;
+; 161mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/161mux.bdf                                      ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -170,39 +187,236 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 8         ;
+; Estimated Total logic elements              ; 239       ;
 ;                                             ;           ;
-; Total combinational functions               ; 8         ;
+; Total combinational functions               ; 103       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 96        ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 5         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8         ;
+;     -- normal mode                          ; 103       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
+; Total registers                             ; 145       ;
+;     -- Dedicated logic registers            ; 145       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 26        ;
+; I/O pins                                    ; 46        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; sw9~input ;
-; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 66        ;
-; Average fan-out                             ; 1.10      ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 145       ;
+; Total fan-out                               ; 912       ;
+; Average fan-out                             ; 2.68      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |controlevisor             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |controlevisor      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |trabalhofinal_swap            ; 103 (0)           ; 145 (0)      ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |trabalhofinal_swap                                                               ; work         ;
+;    |MEM_16ADD_SWAP:inst|       ; 101 (0)           ; 121 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst                                           ; work         ;
+;       |REG_1BYTE_SWAP:inst10|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst11|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst12|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst13|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst14|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst15|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst16|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst17|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst18|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst19|  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19                     ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1 ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst2 ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst3 ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst4 ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5 ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst6 ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst7 ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst8 ; work         ;
+;       |REG_1BYTE_SWAP:inst1|   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1                      ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst1  ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2  ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst3  ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst4  ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst5  ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst6  ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7  ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst8  ; work         ;
+;       |REG_1BYTE_SWAP:inst6|   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6                      ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst1  ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst2  ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3  ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst4  ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5  ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst6  ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7  ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst8  ; work         ;
+;       |REG_1BYTE_SWAP:inst7|   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7                      ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst1  ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst2  ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3  ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst4  ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst5  ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst6  ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst7  ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst8  ; work         ;
+;       |REG_1BYTE_SWAP:inst8|   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8                      ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst1  ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst2  ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3  ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst4  ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst5  ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst6  ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7  ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst8  ; work         ;
+;       |REG_1BYTE_SWAP:inst9|   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9                      ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst1  ; work         ;
+;          |REG_1BIT_SWAP:inst2| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2  ; work         ;
+;          |REG_1BIT_SWAP:inst3| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst3  ; work         ;
+;          |REG_1BIT_SWAP:inst4| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst4  ; work         ;
+;          |REG_1BIT_SWAP:inst5| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5  ; work         ;
+;          |REG_1BIT_SWAP:inst6| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst6  ; work         ;
+;          |REG_1BIT_SWAP:inst7| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7  ; work         ;
+;          |REG_1BIT_SWAP:inst8| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst8  ; work         ;
+;       |REG_1BYTE_SWAP:inst|    ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst                       ; work         ;
+;          |REG_1BIT_SWAP:inst1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1   ; work         ;
+;       |decod4x16:inst3|        ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|decod4x16:inst3                           ; work         ;
+;          |decod2x4:inst13|     ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst13           ; work         ;
+;          |decod2x4:inst15|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst15           ; work         ;
+;          |decod2x4:inst16|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst16           ; work         ;
+;          |decod2x4:inst17|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst17           ; work         ;
+;       |mux16busx1:inst5|       ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5                          ; work         ;
+;          |161mux:inst2|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst2             ; work         ;
+;          |161mux:inst3|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst3             ; work         ;
+;          |161mux:inst4|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst4             ; work         ;
+;          |161mux:inst5|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst5             ; work         ;
+;          |161mux:inst6|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6             ; work         ;
+;          |161mux:inst7|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst7             ; work         ;
+;          |161mux:inst8|        ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst8             ; work         ;
+;          |161mux:inst|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst              ; work         ;
+;    |REG_1BYTE:ADDRESS_REG|     ; 1 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG                                         ; work         ;
+;       |REG_1BIT:inst10|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst10                         ; work         ;
+;       |REG_1BIT:inst11|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst11                         ; work         ;
+;       |REG_1BIT:inst12|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst12                         ; work         ;
+;       |REG_1BIT:inst13|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst13                         ; work         ;
+;       |REG_1BIT:inst14|        ; 1 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst14                         ; work         ;
+;          |21mux:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst14|21mux:inst1             ; work         ;
+;       |REG_1BIT:inst8|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst8                          ; work         ;
+;       |REG_1BIT:inst9|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst9                          ; work         ;
+;       |REG_1BIT:inst|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:ADDRESS_REG|REG_1BIT:inst                           ; work         ;
+;    |REG_1BYTE:DATA_OUT_REG|    ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG                                        ; work         ;
+;       |REG_1BIT:inst10|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst10                        ; work         ;
+;       |REG_1BIT:inst11|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst11                        ; work         ;
+;       |REG_1BIT:inst12|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst12                        ; work         ;
+;       |REG_1BIT:inst13|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst13                        ; work         ;
+;       |REG_1BIT:inst14|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst14                        ; work         ;
+;       |REG_1BIT:inst8|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst8                         ; work         ;
+;       |REG_1BIT:inst9|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst9                         ; work         ;
+;       |REG_1BIT:inst|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_OUT_REG|REG_1BIT:inst                          ; work         ;
+;    |REG_1BYTE:DATA_REG|        ; 1 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG                                            ; work         ;
+;       |REG_1BIT:inst10|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst10                            ; work         ;
+;       |REG_1BIT:inst11|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst11                            ; work         ;
+;       |REG_1BIT:inst12|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst12                            ; work         ;
+;       |REG_1BIT:inst13|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst13                            ; work         ;
+;       |REG_1BIT:inst14|        ; 1 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst14                            ; work         ;
+;          |21mux:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst14|21mux:inst1                ; work         ;
+;       |REG_1BIT:inst8|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst8                             ; work         ;
+;       |REG_1BIT:inst9|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst9                             ; work         ;
+;       |REG_1BIT:inst|          ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinal_swap|REG_1BYTE:DATA_REG|REG_1BIT:inst                              ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal                                                            ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst2|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst3|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst4|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst5|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst6|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst7|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst8|inst2 ; Merged with MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2 ;
+; Total Number of Removed Registers = 7                             ;                                                                               ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -210,12 +424,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 145   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 144   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -225,7 +439,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -235,26 +449,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Apr 04 16:49:41 2023
+    Info: Processing started: Wed Apr 05 01:41:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/name_top.bdf
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file display/name_top.bdf
     Info (12023): Found entity 1: name_top
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/ledg.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/ledg.bdf
     Info (12023): Found entity 1: ledG
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/ledf.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/ledf.bdf
     Info (12023): Found entity 1: ledF
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/lede.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/lede.bdf
     Info (12023): Found entity 1: ledE
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/ledd.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/ledd.bdf
     Info (12023): Found entity 1: ledD
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/ledc.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/ledc.bdf
     Info (12023): Found entity 1: ledC
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/ledb.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/ledb.bdf
     Info (12023): Found entity 1: ledB
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/leda.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/leda.bdf
     Info (12023): Found entity 1: ledA
-Info (12021): Found 1 design units, including 1 entities, in source file /altera/13.1/display/decoddisplay.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file display/decoddisplay.bdf
     Info (12023): Found entity 1: decoddisplay
 Info (12021): Found 1 design units, including 1 entities, in source file decod4x16.bdf
     Info (12023): Found entity 1: decod4x16
@@ -272,18 +486,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file trabalh
     Info (12023): Found entity 1: trabalhofinal
 Info (12021): Found 1 design units, including 1 entities, in source file controlevisor.bdf
     Info (12023): Found entity 1: controlevisor
-Info (12127): Elaborating entity "controlevisor" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file mem_16add_swap.bdf
+    Info (12023): Found entity 1: MEM_16ADD_SWAP
+Info (12021): Found 1 design units, including 1 entities, in source file reg_1byte_swap.bdf
+    Info (12023): Found entity 1: REG_1BYTE_SWAP
+Info (12021): Found 1 design units, including 1 entities, in source file reg_1bit_swap.bdf
+    Info (12023): Found entity 1: REG_1BIT_SWAP
+Info (12021): Found 1 design units, including 1 entities, in source file trabalhofinal_swap.bdf
+    Info (12023): Found entity 1: trabalhofinal_swap
+Info (12127): Elaborating entity "trabalhofinal_swap" for the top level hierarchy
+Warning (275002): No superset bus at connection
+Info (12128): Elaborating entity "REG_1BYTE" for hierarchy "REG_1BYTE:ADDRESS_REG"
+Info (12128): Elaborating entity "REG_1BIT" for hierarchy "REG_1BYTE:ADDRESS_REG|REG_1BIT:inst"
+Info (12128): Elaborating entity "21mux" for hierarchy "REG_1BYTE:ADDRESS_REG|REG_1BIT:inst|21mux:inst1"
+Info (12130): Elaborated megafunction instantiation "REG_1BYTE:ADDRESS_REG|REG_1BIT:inst|21mux:inst1"
+Info (12128): Elaborating entity "MEM_16ADD_SWAP" for hierarchy "MEM_16ADD_SWAP:inst"
+Info (12128): Elaborating entity "mux16busx1" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5"
+Info (12128): Elaborating entity "161mux" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
+Info (12130): Elaborated megafunction instantiation "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
+Info (12128): Elaborating entity "REG_1BYTE_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19"
+Info (12128): Elaborating entity "REG_1BIT_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1"
+Info (12128): Elaborating entity "decod4x16" for hierarchy "MEM_16ADD_SWAP:inst|decod4x16:inst2"
+Info (12128): Elaborating entity "decod2x4" for hierarchy "MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst17"
+Info (13014): Ignored 40 buffer(s)
+    Info (13019): Ignored 40 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 18 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 8 logic cells
+Info (21057): Implemented 293 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 247 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4617 megabytes
-    Info: Processing ended: Tue Apr 04 16:49:44 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Wed Apr 05 01:41:23 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
