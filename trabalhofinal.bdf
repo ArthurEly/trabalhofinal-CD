@@ -1983,37 +1983,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 840 -560)
-	(pt 712 -560)
-)
-(connector
-	(pt 840 -544)
-	(pt 712 -544)
-)
-(connector
-	(pt 712 -560)
-	(pt 712 -544)
-	(bus)
-)
-(connector
-	(pt 840 -528)
-	(pt 712 -528)
-)
-(connector
-	(pt 712 -544)
-	(pt 712 -528)
-	(bus)
-)
-(connector
-	(pt 840 -512)
-	(pt 712 -512)
-)
-(connector
-	(pt 712 -528)
-	(pt 712 -512)
-	(bus)
-)
-(connector
 	(text "out[7..0]" (rect 682 -328 723 -316)(font "Arial" ))
 	(pt 672 -312)
 	(pt 712 -312)
@@ -2028,11 +1997,6 @@ applicable agreement for further details.
 	(text "out[0]" (rect 722 -384 750 -372)(font "Arial" ))
 	(pt 712 -368)
 	(pt 840 -368)
-)
-(connector
-	(pt 712 -512)
-	(pt 712 -416)
-	(bus)
 )
 (connector
 	(pt 712 -416)
@@ -2150,6 +2114,46 @@ applicable agreement for further details.
 (connector
 	(pt -72 416)
 	(pt -72 472)
+)
+(connector
+	(pt 712 -512)
+	(pt 712 -416)
+	(bus)
+)
+(connector
+	(text "out[4]" (rect 722 -528 750 -516)(font "Arial" ))
+	(pt 840 -512)
+	(pt 712 -512)
+)
+(connector
+	(pt 712 -528)
+	(pt 712 -512)
+	(bus)
+)
+(connector
+	(text "out[5]" (rect 722 -544 750 -532)(font "Arial" ))
+	(pt 840 -528)
+	(pt 712 -528)
+)
+(connector
+	(text "out[6]" (rect 722 -560 750 -548)(font "Arial" ))
+	(pt 840 -544)
+	(pt 712 -544)
+)
+(connector
+	(pt 712 -560)
+	(pt 712 -544)
+	(bus)
+)
+(connector
+	(pt 712 -544)
+	(pt 712 -528)
+	(bus)
+)
+(connector
+	(text "out[7]" (rect 722 -576 750 -564)(font "Arial" ))
+	(pt 840 -560)
+	(pt 712 -560)
 )
 (junction (pt -72 64))
 (junction (pt 248 520))
