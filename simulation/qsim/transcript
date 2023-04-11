@@ -26,6 +26,33 @@
 # Loading work.trabalhofinal_swap_vlg_sample_tst
 # Loading work.trabalhofinal_swap_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# Simulation passed !
-# ** Note: $finish    : sim_trabalhofinal.vwf.vt(755)
-#    Time: 1 us  Iteration: 0  Instance: /trabalhofinal_swap_vlg_vec_tst/tb_out
+# ERROR! Vector Mismatch for output port address_reg_out[1] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port address_reg_out[3] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port data_out[1] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port data_out[3] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port data_reg_out[1] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port data_reg_out[3] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port morte[1] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port morte[3] :: @time = 1000000.000 ps
+#      Expected value = 00000000
+#      Real value = 00001010
+# ERROR! Vector Mismatch for output port q :: @time = 2048000.000 ps
+#      Expected value = 0
+#      Real value = 1
+#           9 mismatched vectors : Simulation failed !
+# ** Note: $finish    : sim_trabalhofinal.vwf.vt(817)
+#    Time: 10 us  Iteration: 0  Instance: /trabalhofinal_swap_vlg_vec_tst/tb_out

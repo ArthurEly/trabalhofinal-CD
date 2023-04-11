@@ -2,6 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity trabalhofinal_swap is
     port(
+        q               : out    vl_logic;
+        clock           : in     vl_logic;
         address_reg_out : out    vl_logic_vector(7 downto 0);
         sw9             : in     vl_logic;
         sw8             : in     vl_logic;
