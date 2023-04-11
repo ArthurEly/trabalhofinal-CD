@@ -262,7 +262,7 @@ applicable agreement for further details.
 	(input)
 	(rect 72 1152 240 1168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clock" (rect 5 0 31 12)(font "Arial" ))
+	(text "clock" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -273,6 +273,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 16 1168 72 1184))
 )
 (pin
 	(output)
@@ -354,6 +355,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 680 1136 728 1152))
 )
 (symbol
 	(rect 1080 544 1296 648)
@@ -1234,8 +1236,8 @@ applicable agreement for further details.
 	(port
 		(pt 144 40)
 		(output)
-		(text "q[23..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
-		(text "q[23..0]" (rect 89 33 131 47)(font "Arial" (font_size 8)))
+		(text "q[25..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "q[25..0]" (rect 89 33 131 47)(font "Arial" (font_size 8)))
 		(line (pt 144 40)(pt 128 40)(line_width 3))
 	)
 	(drawing
@@ -2036,15 +2038,15 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "q[23..0]" (rect 440 1126 452 1163)(font "Arial" )(vertical))
+	(text "q[25]" (rect 466 1112 490 1124)(font "Arial" ))
+	(pt 504 1128)
+	(pt 456 1128)
+)
+(connector
+	(text "q[25..0]" (rect 443 1123 455 1160)(font "Arial" )(vertical))
 	(pt 456 1168)
 	(pt 456 1128)
 	(bus)
-)
-(connector
-	(text "q[10]" (rect 466 1112 490 1124)(font "Arial" ))
-	(pt 504 1128)
-	(pt 456 1128)
 )
 (junction (pt 616 520))
 (junction (pt 616 584))
