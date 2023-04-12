@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16U484C6
-set_global_assignment -name TOP_LEVEL_ENTITY MAQUINA_C
+set_global_assignment -name TOP_LEVEL_ENTITY trabalhofinalfinal_
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:29:18  MARCH 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -49,7 +49,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/aluno/Desktop/trabalhofinal-CD-main/trabalhofinal-CD-main/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/altera/13.1/Trabalhofinal-CD/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -103,8 +103,14 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE sim_reg1byte_swap.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_mem16add_swap.vwf
 set_global_assignment -name BDF_FILE trabalhofinal_swap.bdf
 set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinas.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_uc.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinaA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinaB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinaC.vwf
+set_global_assignment -name BDF_FILE trabalhofinalfinal_.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinas.vwf

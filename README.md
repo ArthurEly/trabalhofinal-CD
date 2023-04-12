@@ -244,10 +244,33 @@
 				- novo Estado
 
 
-			
+	RELAÇÃO ENTRE OS SINAIS --------------------------------------------------------------------------------------------------
+	
+
+	*** MÁQUINA A (Write)
+	
+	LOAD REG
+	--> é o load do registrador tanto de address up como de data user
+	 	
+
+	*** MÁQUINA B (Read)
+	
+	READ MEM
+	--> é o sinal de load para o registrador de READ
+	
+	B LOAD REG
+	--> é o sinal que da LOAD porém só no registrador de endereço independentemente dos switchs
 
 
-				
+	*** MÁQUINA C (Swap) 
+	
+	LOAD REG SWAP ADDRESS
+	--> sinal de load para os dois registradores de endereço (e nao de dados!) 
+ 
+	LOAD REG SWAP DATA
+	--> load nos dois registradores específicos de data pro swap
+	
+
 	
 		
 		
