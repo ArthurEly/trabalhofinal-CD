@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 352 288)
+	(text "controlevisor" (rect 5 0 79 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "count[1..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "count[1..0]" (rect 21 27 81 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "up_on" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "up_on" (rect 21 43 56 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "S_mostraE" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "S_mostraE" (rect 21 59 82 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "down_on" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "down_on" (rect 21 75 75 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "msg_done" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "msg_done" (rect 21 91 80 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "B_done" (rect 0 0 43 14)(font "Arial" (font_size 8)))
+		(text "B_done" (rect 21 107 64 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "B_mostra_E" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "B_mostra_E" (rect 21 123 89 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 288 152)
+		(input)
+		(text "read_reg[7..0]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "read_reg[7..0]" (rect 183 144 263 158)(font "Arial" (font_size 8)))
+		(line (pt 272 152)(pt 288 152)(line_width 3))
+	)
+	(port
+		(pt 288 168)
+		(input)
+		(text "address_down[7..0]" (rect 0 0 115 14)(font "Arial" (font_size 8)))
+		(text "address_down[7..0]" (rect 148 160 263 174)(font "Arial" (font_size 8)))
+		(line (pt 272 168)(pt 288 168)(line_width 3))
+	)
+	(port
+		(pt 288 184)
+		(input)
+		(text "address_up[7..0]" (rect 0 0 96 14)(font "Arial" (font_size 8)))
+		(text "address_up[7..0]" (rect 167 176 263 190)(font "Arial" (font_size 8)))
+		(line (pt 272 184)(pt 288 184)(line_width 3))
+	)
+	(port
+		(pt 288 200)
+		(input)
+		(text "data_user[7..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "data_user[7..0]" (rect 177 192 263 206)(font "Arial" (font_size 8)))
+		(line (pt 272 200)(pt 288 200)(line_width 3))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "3VISOR_REG[6..0]" (rect 0 0 105 14)(font "Arial" (font_size 8)))
+		(text "3VISOR_REG[6..0]" (rect 162 27 267 41)(font "Arial" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "2VISOR_REG[6..0]" (rect 0 0 105 14)(font "Arial" (font_size 8)))
+		(text "2VISOR_REG[6..0]" (rect 162 43 267 57)(font "Arial" (font_size 8)))
+		(line (pt 288 48)(pt 272 48)(line_width 3))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "0VISOR_REG12[6..0]" (rect 0 0 119 14)(font "Arial" (font_size 8)))
+		(text "0VISOR_REG12[6..0]" (rect 148 59 267 73)(font "Arial" (font_size 8)))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "0VISOR_REG[6..0]" (rect 0 0 105 14)(font "Arial" (font_size 8)))
+		(text "0VISOR_REG[6..0]" (rect 162 75 267 89)(font "Arial" (font_size 8)))
+		(line (pt 288 80)(pt 272 80)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 208))
+	)
+)
