@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Apr 12 20:04:26 2023
+Analysis & Synthesis Status : Successful - Thu Apr 13 04:44:54 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : trabalhofinalcd
 Top-level Entity Name : trabalhofinalfinal_
 Family : Cyclone III
-Total logic elements : 26
-    Total combinational functions : 26
-    Dedicated logic registers : 26
-Total registers : 26
-Total pins : 45
+Total logic elements : 578
+    Total combinational functions : 561
+    Dedicated logic registers : 215
+Total registers : 215
+Total pins : 72
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

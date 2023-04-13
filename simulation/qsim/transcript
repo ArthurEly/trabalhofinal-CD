@@ -2,45 +2,30 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module UC
+# -- Compiling module trabalhofinalfinal_
 # 
 # Top level modules:
-# 	UC
+# 	trabalhofinalfinal_
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module UC_vlg_sample_tst
-# -- Compiling module UC_vlg_check_tst
-# -- Compiling module UC_vlg_vec_tst
+# -- Compiling module trabalhofinalfinal__vlg_sample_tst
+# -- Compiling module trabalhofinalfinal__vlg_check_tst
+# -- Compiling module trabalhofinalfinal__vlg_vec_tst
 # 
 # Top level modules:
-# 	UC_vlg_vec_tst
-# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.UC_vlg_vec_tst 
-# Loading work.UC_vlg_vec_tst
-# Loading work.UC
+# 	trabalhofinalfinal__vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.trabalhofinalfinal__vlg_vec_tst 
+# Loading work.trabalhofinalfinal__vlg_vec_tst
+# Loading work.trabalhofinalfinal_
 # Loading cycloneiii_ver.cycloneiii_io_obuf
 # Loading cycloneiii_ver.cycloneiii_io_ibuf
 # Loading cycloneiii_ver.cycloneiii_clkctrl
 # Loading cycloneiii_ver.cycloneiii_mux41
 # Loading cycloneiii_ver.cycloneiii_ena_reg
-# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_lcell_comb
-# Loading work.UC_vlg_sample_tst
-# Loading work.UC_vlg_check_tst
+# Loading altera_ver.dffeas
+# Loading work.trabalhofinalfinal__vlg_sample_tst
+# Loading work.trabalhofinalfinal__vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# ERROR! Vector Mismatch for output port count[0] :: @time = 1000000.000 ps
-#      Expected value = 00
-#      Real value = 11
-# ERROR! Vector Mismatch for output port count[1] :: @time = 1000000.000 ps
-#      Expected value = 00
-#      Real value = 11
-# ERROR! Vector Mismatch for output port S_mostraE :: @time = 1000000.000 ps
-#      Expected value = 0
-#      Real value = 1
-# ERROR! Vector Mismatch for output port A_mostraDA :: @time = 1300000.000 ps
-#      Expected value = 0
-#      Real value = 1
-# ERROR! Vector Mismatch for output port B_mostraD :: @time = 1450000.000 ps
-#      Expected value = 0
-#      Real value = 1
-#           5 mismatched vectors : Simulation failed !
-# ** Note: $finish    : sim_UC.vwf.vt(601)
-#    Time: 3 us  Iteration: 0  Instance: /UC_vlg_vec_tst/tb_out
+# Simulation passed !
+# ** Note: $finish    : sim_trabalhofinal.vwf.vt(1309)
+#    Time: 4 us  Iteration: 0  Instance: /trabalhofinalfinal__vlg_vec_tst/tb_out

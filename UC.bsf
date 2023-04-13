@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 304 304)
+	(rect 16 16 304 336)
 	(text "UC" (rect 5 0 21 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(text "inst" (rect 8 304 25 316)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -156,7 +156,21 @@ applicable agreement for further details.
 		(text "A_LOAD_REGS" (rect 177 251 267 265)(font "Arial" (font_size 8)))
 		(line (pt 288 256)(pt 272 256))
 	)
+	(port
+		(pt 288 272)
+		(output)
+		(text "habilita" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "habilita" (rect 229 267 267 281)(font "Arial" (font_size 8)))
+		(line (pt 288 272)(pt 272 272))
+	)
+	(port
+		(pt 288 288)
+		(output)
+		(text "button" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "button" (rect 232 283 267 297)(font "Arial" (font_size 8)))
+		(line (pt 288 288)(pt 272 288))
+	)
 	(drawing
-		(rectangle (rect 16 16 272 272))
+		(rectangle (rect 16 16 272 304))
 	)
 )
