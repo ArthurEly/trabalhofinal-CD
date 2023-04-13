@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trabalhofinalcd
-Wed Apr 12 17:56:28 2023
+Wed Apr 12 20:04:26 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,9 +13,13 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +45,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 12 17:56:28 2023      ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 12 20:04:26 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
-; Top-level Entity Name              ; controlevisor                              ;
+; Top-level Entity Name              ; trabalhofinalfinal_                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 8                                          ;
-;     Total combinational functions  ; 8                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 34                                         ;
+; Total logic elements               ; 26                                         ;
+;     Total combinational functions  ; 26                                         ;
+;     Dedicated logic registers      ; 26                                         ;
+; Total registers                    ; 26                                         ;
+; Total pins                         ; 45                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -58,151 +62,551 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; EP3C16U484C6       ;                    ;
-; Top-level entity name                                                      ; controlevisor      ; trabalhofinalcd    ;
-; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-; Synthesis Seed                                                             ; 1                  ; 1                  ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                         ;
++----------------------------------------------------------------------------+---------------------+--------------------+
+; Option                                                                     ; Setting             ; Default Value      ;
++----------------------------------------------------------------------------+---------------------+--------------------+
+; Device                                                                     ; EP3C16U484C6        ;                    ;
+; Top-level entity name                                                      ; trabalhofinalfinal_ ; trabalhofinalcd    ;
+; Family name                                                                ; Cyclone III         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                 ;
+; Enable compact report table                                                ; Off                 ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                ;
+; Preserve fewer node names                                                  ; On                  ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                ;
+; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                ; Auto               ;
+; Safe State Machine                                                         ; Off                 ; Off                ;
+; Extract Verilog State Machines                                             ; On                  ; On                 ;
+; Extract VHDL State Machines                                                ; On                  ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                 ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                  ; On                 ;
+; Parallel Synthesis                                                         ; On                  ; On                 ;
+; DSP Block Balancing                                                        ; Auto                ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                  ; On                 ;
+; Power-Up Don't Care                                                        ; On                  ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                 ; Off                ;
+; Remove Duplicate Registers                                                 ; On                  ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                 ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                 ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                 ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                  ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                ;
+; Optimization Technique                                                     ; Balanced            ; Balanced           ;
+; Carry Chain Length                                                         ; 70                  ; 70                 ;
+; Auto Carry Chains                                                          ; On                  ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                  ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                ;
+; Auto ROM Replacement                                                       ; On                  ; On                 ;
+; Auto RAM Replacement                                                       ; On                  ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                  ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                  ; On                 ;
+; Strict RAM Replacement                                                     ; Off                 ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                  ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                  ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                ;
+; Auto Resource Sharing                                                      ; Off                 ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                  ; On                 ;
+; Report Parameter Settings                                                  ; On                  ; On                 ;
+; Report Source Assignments                                                  ; On                  ; On                 ;
+; Report Connectivity Checks                                                 ; On                  ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                   ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation  ; Normal compilation ;
+; HDL message level                                                          ; Level2              ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                 ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                ;
+; Clock MUX Protection                                                       ; On                  ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                 ; Off                ;
+; Block Design Naming                                                        ; Auto                ; Auto               ;
+; SDC constraint protection                                                  ; Off                 ; Off                ;
+; Synthesis Effort                                                           ; Auto                ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium              ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                  ; On                 ;
+; Synthesis Seed                                                             ; 1                   ; 1                  ;
++----------------------------------------------------------------------------+---------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
-; controlevisor.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.1/Trabalhofinal-CD/controlevisor.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; UC.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/UC.bdf                  ;         ;
+; MAQUINA_C.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_C.bdf           ;         ;
+; MAQUINA_B.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_B.bdf           ;         ;
+; MAQUINA_A.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_A.bdf           ;         ;
+; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/contador.bdf            ;         ;
+; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod4x16.bdf           ;         ;
+; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod2x4.bdf            ;         ;
+; REG_1BYTE.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE.bdf           ;         ;
+; REG_1BIT.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT.bdf            ;         ;
+; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux16busx1.bdf          ;         ;
+; controlevisor.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/controlevisor.bdf       ;         ;
+; MEM_16ADD_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MEM_16ADD_SWAP.bdf      ;         ;
+; REG_1BYTE_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE_SWAP.bdf      ;         ;
+; REG_1BIT_SWAP.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT_SWAP.bdf       ;         ;
+; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/lpm_counter0.vhd        ;         ;
+; trabalhofinalfinal_.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/trabalhofinalfinal_.bdf ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_counter.tdf                                    ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_constant.inc                                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_add_sub.inc                                    ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/cmpconst.inc                                       ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_compare.inc                                    ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_counter.inc                                    ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/dffeea.inc                                         ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/alt_counter_stratix.inc                            ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/aglobal131.inc                                     ;         ;
+; db/cntr_lph.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/db/cntr_lph.tdf         ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/21mux.bdf                                        ;         ;
+; 161mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/161mux.bdf                                       ;         ;
+; 2x8mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/2x8mux.bdf                                       ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 8         ;
-;                                             ;           ;
-; Total combinational functions               ; 8         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 8         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 0         ;
-;     -- Dedicated logic registers            ; 0         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 34        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; sw9~input ;
-; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 74        ;
-; Average fan-out                             ; 0.97      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 26          ;
+;                                             ;             ;
+; Total combinational functions               ; 26          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 26          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 1           ;
+;     -- arithmetic mode                      ; 25          ;
+;                                             ;             ;
+; Total registers                             ; 26          ;
+;     -- Dedicated logic registers            ; 26          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 45          ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 26          ;
+; Total fan-out                               ; 149         ;
+; Average fan-out                             ; 1.05        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |controlevisor             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |controlevisor      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
+; |trabalhofinalfinal_                      ; 26 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |trabalhofinalfinal_                                                                               ; work         ;
+;    |lpm_counter0:inst21|                  ; 26 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21                                                           ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 26 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component                         ; work         ;
+;          |cntr_lph:auto_generated|        ; 26 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component|cntr_lph:auto_generated ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                             ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                          ; IP Include File                                                                        ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
+; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |trabalhofinalfinal_|lpm_counter0:inst21 ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/lpm_counter0.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++---------------------------------------------------------------------+--------------------------------------+
+; Register name                                                       ; Reason for Removal                   ;
++---------------------------------------------------------------------+--------------------------------------+
+; REG_1BYTE:DATA_UP|REG_1BIT:inst8|inst2                              ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst9|inst2                              ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst10|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst11|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst12|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst13|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst14|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst|inst2                               ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst8|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst9|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst10|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst11|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst12|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst13|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst14|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_USER|REG_1BIT:inst|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst8|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst9|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst10|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst11|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst12|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst13|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst14|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:DATA_DOWN|REG_1BIT:inst|inst2                             ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst8|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst7|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst6|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst5|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst4|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst3|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst2|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2   ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst8|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst6|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst5|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst4|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst3|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst1|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst8|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst6|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst4|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst2|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst1|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst8|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst7|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst6|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst5|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst4|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst2|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst1|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst8|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst6|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst5|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst4|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst2|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst1|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst8|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst6|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst4|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst3|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst1|inst2  ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst8|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst7|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst6|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst4|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst3|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst2|inst2 ; Stuck at GND due to stuck port clock ;
+; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1|inst2 ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst8|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst9|inst2                             ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst10|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst11|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst12|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst13|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst14|inst2                            ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:READ_REG|REG_1BIT:inst|inst2                              ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst8|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst9|inst2                           ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst10|inst2                          ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst11|inst2                          ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst12|inst2                          ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst13|inst2                          ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst14|inst2                          ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_UP|REG_1BIT:inst|inst2                            ; Stuck at GND due to stuck port clock ;
+; UC:inst22|inst1                                                     ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_B:inst4|inst1                                     ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_B:inst4|inst7                                     ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_B:inst4|inst16                                    ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_A:inst3|inst13                                    ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_A:inst3|inst                                      ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_A:inst3|inst14                                    ; Stuck at GND due to stuck port clock ;
+; UC:inst22|contador:inst|inst                                        ; Stuck at GND due to stuck port clock ;
+; UC:inst22|contador:inst|inst1                                       ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_C:inst2|inst1                                     ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_C:inst2|inst                                      ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_C:inst2|inst22                                    ; Stuck at GND due to stuck port clock ;
+; UC:inst22|MAQUINA_C:inst2|inst25                                    ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst8|inst2                         ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst9|inst2                         ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst10|inst2                        ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst11|inst2                        ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst12|inst2                        ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst13|inst2                        ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst14|inst2                        ; Stuck at GND due to stuck port clock ;
+; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|inst2                          ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 189                             ;                                      ;
++---------------------------------------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++-----------------------------------------+-------------------------+----------------------------------------------------------------------+
+; Register name                           ; Reason for Removal      ; Registers Removed due to This Register                               ;
++-----------------------------------------+-------------------------+----------------------------------------------------------------------+
+; REG_1BYTE:DATA_UP|REG_1BIT:inst8|inst2  ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst2|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst2|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst2|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst2|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst2|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst8|inst2                              ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst9|inst2  ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst3|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst3|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst3|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst3|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst9|inst2                              ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst10|inst2 ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst4|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst4|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst4|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst4|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst4|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst4|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst4|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst10|inst2                             ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst11|inst2 ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst5|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst5|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst5|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst5|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst11|inst2                             ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst12|inst2 ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst6|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst6|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst6|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst6|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst6|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst6|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst6|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst12|inst2                             ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst13|inst2 ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst7|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst7|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst7|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst13|inst2                             ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst14|inst2 ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst8|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst8|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst8|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst8|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst8|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst8|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst8|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst14|inst2                             ;
+; REG_1BYTE:DATA_UP|REG_1BIT:inst|inst2   ; Stuck at GND            ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1|inst2,   ;
+;                                         ; due to stuck port clock ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst1|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst1|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst1|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst1|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst1|inst2,  ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1|inst2, ;
+;                                         ;                         ; REG_1BYTE:READ_REG|REG_1BIT:inst|inst2                               ;
+; UC:inst22|inst1                         ; Stuck at GND            ; UC:inst22|contador:inst|inst, UC:inst22|contador:inst|inst1,         ;
+;                                         ; due to stuck port clock ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst8|inst2,                         ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst9|inst2,                         ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst10|inst2,                        ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst11|inst2,                        ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst12|inst2,                        ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst13|inst2,                        ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst14|inst2,                        ;
+;                                         ;                         ; REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|inst2                           ;
+; UC:inst22|MAQUINA_B:inst4|inst7         ; Stuck at GND            ; UC:inst22|MAQUINA_B:inst4|inst16                                     ;
+;                                         ; due to stuck port clock ;                                                                      ;
++-----------------------------------------+-------------------------+----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -210,7 +614,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 26    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -220,12 +624,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 26          ; Signed Integer                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
+; LPM_MODULUS            ; 0           ; Untyped                                                     ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_lph    ; Untyped                                                     ;
++------------------------+-------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -235,9 +666,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Apr 12 17:56:20 2023
+    Info: Processing started: Wed Apr 12 20:04:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file uc.bdf
     Info (12023): Found entity 1: UC
 Info (12021): Found 1 design units, including 1 entities, in source file maquina_c.bdf
@@ -293,33 +724,142 @@ Info (12021): Found 1 design units, including 1 entities, in source file trabalh
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_counter0.vhd
     Info (12022): Found design unit 1: lpm_counter0-SYN
     Info (12023): Found entity 1: lpm_counter0
-Info (12127): Elaborating entity "controlevisor" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file trabalhofinalfinal_.bdf
+    Info (12023): Found entity 1: trabalhofinalfinal_
+Info (12127): Elaborating entity "trabalhofinalfinal_" for the top level hierarchy
+Warning (275085): Found inconsistent dimensions for element "q"
+Warning (275080): Converted elements in bus name "q" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q[25]" to "q25"
+    Warning (275081): Converted element name(s) from "q[25..0]" to "q25..0"
+Warning (275002): No superset bus at connection
+Warning (275002): No superset bus at connection
+Warning (275002): No superset bus at connection
+Warning (275013): Port "clk" of type UC and instance "inst22" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "ADDRESS_DOWN" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "ADDRESS_UP" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "READ_REG" is missing source signal
+Warning (275013): Port "clk" of type MEM_16ADD_SWAP and instance "inst" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "DATA_DOWN" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "DATA_USER" is missing source signal
+Warning (275013): Port "clk" of type REG_1BYTE and instance "DATA_UP" is missing source signal
+Warning (275009): Pin "clk" not connected
+Warning (275009): Pin "sw0" not connected
+Warning (275009): Pin "sw1" not connected
+Warning (275009): Pin "sw2" not connected
+Warning (275009): Pin "sw3" not connected
+Warning (275009): Pin "sw4" not connected
+Warning (275009): Pin "sw5" not connected
+Warning (275009): Pin "sw6" not connected
+Warning (275009): Pin "sw7" not connected
+Warning (275008): Primitive "AND2" of instance "inst10" not used
+Warning (275008): Primitive "AND2" of instance "inst11" not used
+Warning (275008): Primitive "AND2" of instance "inst12" not used
+Warning (275008): Primitive "AND2" of instance "inst13" not used
+Warning (275008): Primitive "AND2" of instance "inst14" not used
+Warning (275008): Primitive "AND2" of instance "inst15" not used
+Warning (275008): Primitive "AND2" of instance "inst16" not used
+Warning (275008): Primitive "AND2" of instance "inst17" not used
+Warning (275008): Primitive "AND2" of instance "inst18" not used
+Warning (275008): Primitive "AND2" of instance "inst3" not used
+Warning (275008): Primitive "AND2" of instance "inst4" not used
+Warning (275008): Primitive "AND2" of instance "inst5" not used
+Warning (275008): Primitive "AND2" of instance "inst6" not used
+Warning (275008): Primitive "AND2" of instance "inst7" not used
+Warning (275008): Primitive "AND2" of instance "inst8" not used
+Warning (275008): Primitive "AND2" of instance "inst9" not used
+Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst21"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "26"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lph.tdf
+    Info (12023): Found entity 1: cntr_lph
+Info (12128): Elaborating entity "cntr_lph" for hierarchy "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component|cntr_lph:auto_generated"
+Info (12128): Elaborating entity "REG_1BYTE" for hierarchy "REG_1BYTE:ADDRESS_DOWN"
+Info (12128): Elaborating entity "REG_1BIT" for hierarchy "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst"
+Info (12128): Elaborating entity "21mux" for hierarchy "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|21mux:inst1"
+Info (12130): Elaborated megafunction instantiation "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|21mux:inst1"
+Info (12128): Elaborating entity "UC" for hierarchy "UC:inst22"
+Info (12128): Elaborating entity "MAQUINA_C" for hierarchy "UC:inst22|MAQUINA_C:inst2"
+Info (12128): Elaborating entity "decod2x4" for hierarchy "UC:inst22|decod2x4:inst8"
+Info (12128): Elaborating entity "contador" for hierarchy "UC:inst22|contador:inst"
+Info (12128): Elaborating entity "MAQUINA_A" for hierarchy "UC:inst22|MAQUINA_A:inst3"
+Info (12128): Elaborating entity "MAQUINA_B" for hierarchy "UC:inst22|MAQUINA_B:inst4"
+Info (12128): Elaborating entity "MEM_16ADD_SWAP" for hierarchy "MEM_16ADD_SWAP:inst"
+Info (12128): Elaborating entity "mux16busx1" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5"
+Info (12128): Elaborating entity "161mux" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
+Info (12130): Elaborated megafunction instantiation "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
+Info (12128): Elaborating entity "REG_1BYTE_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19"
+Info (12128): Elaborating entity "REG_1BIT_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1"
+Info (12128): Elaborating entity "decod4x16" for hierarchy "MEM_16ADD_SWAP:inst|decod4x16:inst2"
+Info (12128): Elaborating entity "2x8mux" for hierarchy "2x8mux:inst24"
+Info (12130): Elaborated megafunction instantiation "2x8mux:inst24"
+Info (12128): Elaborating entity "controlevisor" for hierarchy "controlevisor:inst23"
 Warning (275009): Pin "S_mostraE" not connected
 Warning (275009): Pin "B_mostra_D" not connected
 Warning (275009): Pin "B_done" not connected
 Warning (275009): Pin "A_mostra_DA" not connected
 Warning (275009): Pin "msg_done" not connected
 Warning (275009): Pin "count" not connected
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "address_down_reg_out[7]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[6]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[5]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[4]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[3]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[2]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[1]" is stuck at GND
+    Warning (13410): Pin "address_down_reg_out[0]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[7]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[6]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[5]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[4]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[3]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[2]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[1]" is stuck at GND
+    Warning (13410): Pin "address_up_reg_out[0]" is stuck at GND
+    Warning (13410): Pin "data_out[7]" is stuck at GND
+    Warning (13410): Pin "data_out[6]" is stuck at GND
+    Warning (13410): Pin "data_out[5]" is stuck at GND
+    Warning (13410): Pin "data_out[4]" is stuck at GND
+    Warning (13410): Pin "data_out[3]" is stuck at GND
+    Warning (13410): Pin "data_out[2]" is stuck at GND
+    Warning (13410): Pin "data_out[1]" is stuck at GND
+    Warning (13410): Pin "data_out[0]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[7]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[6]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[5]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[4]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[3]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[2]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[1]" is stuck at GND
+    Warning (13410): Pin "data_reg_out[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "S_mostraE"
-    Warning (15610): No output dependent on input pin "B_mostra_D"
-    Warning (15610): No output dependent on input pin "B_done"
-    Warning (15610): No output dependent on input pin "A_mostra_DA"
-    Warning (15610): No output dependent on input pin "msg_done"
-    Warning (15610): No output dependent on input pin "count[2]"
-    Warning (15610): No output dependent on input pin "count[1]"
-    Warning (15610): No output dependent on input pin "count[0]"
-Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 26 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4657 megabytes
-    Info: Processing ended: Wed Apr 12 17:56:28 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:05
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sw9"
+    Warning (15610): No output dependent on input pin "sw8"
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "sw0"
+    Warning (15610): No output dependent on input pin "sw1"
+    Warning (15610): No output dependent on input pin "sw2"
+    Warning (15610): No output dependent on input pin "sw3"
+    Warning (15610): No output dependent on input pin "sw4"
+    Warning (15610): No output dependent on input pin "sw5"
+    Warning (15610): No output dependent on input pin "sw6"
+    Warning (15610): No output dependent on input pin "sw7"
+Info (21057): Implemented 71 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 26 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Wed Apr 12 20:04:26 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
