@@ -18,6 +18,9 @@ entity controlevisor is
         B_mostra_E      : in     vl_logic;
         B_done          : in     vl_logic;
         ad1             : out    vl_logic;
+        adress_down_teste: out    vl_logic;
+        read_reg_teste  : out    vl_logic;
+        address_up_teste: out    vl_logic;
         decod0          : out    vl_logic_vector(6 downto 0);
         data_user       : in     vl_logic_vector(7 downto 0);
         address_up      : in     vl_logic_vector(7 downto 0);

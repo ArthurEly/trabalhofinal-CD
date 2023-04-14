@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trabalhofinalcd
-Fri Apr 14 14:45:34 2023
+Fri Apr 14 15:11:15 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -46,13 +46,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 14 14:45:34 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 14 15:11:15 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
 ; Top-level Entity Name              ; trabalhofinalfinal_                        ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 618                                        ;
-;     Total combinational functions  ; 602                                        ;
+; Total logic elements               ; 633                                        ;
+;     Total combinational functions  ; 617                                        ;
 ;     Dedicated logic registers      ; 214                                        ;
 ; Total registers                    ; 214                                        ;
 ; Total pins                         ; 106                                        ;
@@ -220,16 +220,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                             ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 618                                                                                               ;
+; Estimated Total logic elements              ; 633                                                                                               ;
 ;                                             ;                                                                                                   ;
-; Total combinational functions               ; 602                                                                                               ;
+; Total combinational functions               ; 617                                                                                               ;
 ; Logic element usage by number of LUT inputs ;                                                                                                   ;
-;     -- 4 input functions                    ; 301                                                                                               ;
-;     -- 3 input functions                    ; 188                                                                                               ;
-;     -- <=2 input functions                  ; 113                                                                                               ;
+;     -- 4 input functions                    ; 319                                                                                               ;
+;     -- 3 input functions                    ; 181                                                                                               ;
+;     -- <=2 input functions                  ; 117                                                                                               ;
 ;                                             ;                                                                                                   ;
 ; Logic elements by mode                      ;                                                                                                   ;
-;     -- normal mode                          ; 578                                                                                               ;
+;     -- normal mode                          ; 593                                                                                               ;
 ;     -- arithmetic mode                      ; 24                                                                                                ;
 ;                                             ;                                                                                                   ;
 ; Total registers                             ; 214                                                                                               ;
@@ -240,8 +240,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                 ;
 ; Maximum fan-out node                        ; lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component|cntr_lph:auto_generated|counter_reg_bit[24] ;
 ; Maximum fan-out                             ; 191                                                                                               ;
-; Total fan-out                               ; 2920                                                                                              ;
-; Average fan-out                             ; 2.84                                                                                              ;
+; Total fan-out                               ; 2979                                                                                              ;
+; Average fan-out                             ; 2.86                                                                                              ;
 +---------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 
@@ -250,9 +250,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |trabalhofinalfinal_                      ; 602 (21)          ; 214 (0)      ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |trabalhofinalfinal_                                                                                       ; work         ;
+; |trabalhofinalfinal_                      ; 617 (21)          ; 214 (0)      ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |trabalhofinalfinal_                                                                                       ; work         ;
 ;    |2x8mux:inst24|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|2x8mux:inst24                                                                         ; work         ;
-;    |MEM_16ADD_SWAP:inst|                  ; 461 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst                                                                   ; work         ;
+;    |MEM_16ADD_SWAP:inst|                  ; 468 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst                                                                   ; work         ;
 ;       |REG_1BYTE_SWAP:inst10|             ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10                                             ; work         ;
 ;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst1                         ; work         ;
 ;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2                         ; work         ;
@@ -397,16 +397,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst6                           ; work         ;
 ;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst7                           ; work         ;
 ;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst8                           ; work         ;
-;       |decod4x16:inst2|                   ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2                                                   ; work         ;
+;       |decod4x16:inst2|                   ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2                                                   ; work         ;
 ;          |decod2x4:inst12|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst12                                   ; work         ;
-;          |decod2x4:inst13|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst13                                   ; work         ;
+;          |decod2x4:inst13|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst13                                   ; work         ;
 ;          |decod2x4:inst15|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst15                                   ; work         ;
 ;          |decod2x4:inst16|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst16                                   ; work         ;
-;          |decod2x4:inst17|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst17                                   ; work         ;
-;       |decod4x16:inst3|                   ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3                                                   ; work         ;
-;          |decod2x4:inst13|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst13                                   ; work         ;
+;          |decod2x4:inst17|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst17                                   ; work         ;
+;       |decod4x16:inst3|                   ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3                                                   ; work         ;
+;          |decod2x4:inst13|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst13                                   ; work         ;
 ;          |decod2x4:inst15|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst15                                   ; work         ;
-;          |decod2x4:inst16|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst16                                   ; work         ;
+;          |decod2x4:inst16|                ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst16                                   ; work         ;
 ;          |decod2x4:inst17|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst17                                   ; work         ;
 ;       |mux16busx1:inst4|                  ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4                                                  ; work         ;
 ;          |161mux:inst2|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst2                                     ; work         ;
@@ -486,22 +486,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |MAQUINA_C:inst2|                   ; 11 (11)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|MAQUINA_C:inst2                                                             ; work         ;
 ;       |contador:inst|                     ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|contador:inst                                                               ; work         ;
 ;       |decod2x4:inst8|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|decod2x4:inst8                                                              ; work         ;
-;    |controlevisor:inst23|                 ; 50 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23                                                                  ; work         ;
-;       |codec_mux:inst50|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|codec_mux:inst50                                                 ; work         ;
-;       |decoddisplay:inst6|                ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|decoddisplay:inst6                                               ; work         ;
-;          |ledF:inst6|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|decoddisplay:inst6|ledF:inst6                                    ; work         ;
+;    |controlevisor:inst23|                 ; 58 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23                                                                  ; work         ;
+;       |codec_mux:inst50|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|codec_mux:inst50                                                 ; work         ;
 ;       |display_utils:inst123|             ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|display_utils:inst123                                            ; work         ;
 ;       |display_utils:inst3|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|display_utils:inst3                                              ; work         ;
-;       |display_utils:inst9|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|display_utils:inst9                                              ; work         ;
-;       |mux16busx1:inst49|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49                                                ; work         ;
-;          |161mux:inst2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst2                                   ; work         ;
-;          |161mux:inst3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst3                                   ; work         ;
-;          |161mux:inst4|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst4                                   ; work         ;
-;          |161mux:inst5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst5                                   ; work         ;
-;          |161mux:inst6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst6                                   ; work         ;
-;          |161mux:inst7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst7                                   ; work         ;
-;          |161mux:inst8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst8                                   ; work         ;
-;          |161mux:inst|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst                                    ; work         ;
+;       |display_utils:inst5|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|display_utils:inst5                                              ; work         ;
+;       |mux16busx1:inst49|                 ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49                                                ; work         ;
+;          |161mux:inst2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst2                                   ; work         ;
+;          |161mux:inst3|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst3                                   ; work         ;
+;          |161mux:inst4|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst4                                   ; work         ;
+;          |161mux:inst5|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst5                                   ; work         ;
+;          |161mux:inst6|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst6                                   ; work         ;
+;          |161mux:inst7|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst7                                   ; work         ;
+;          |161mux:inst8|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst8                                   ; work         ;
+;          |161mux:inst|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux16busx1:inst49|161mux:inst                                    ; work         ;
 ;       |mux2busx1:inst2|                   ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux2busx1:inst2                                                  ; work         ;
 ;          |lpm_mux:LPM_MUX_component|      ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux2busx1:inst2|lpm_mux:LPM_MUX_component                        ; work         ;
 ;             |mux_f6e:auto_generated|      ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|controlevisor:inst23|mux2busx1:inst2|lpm_mux:LPM_MUX_component|mux_f6e:auto_generated ; work         ;
@@ -631,7 +629,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Apr 14 14:45:28 2023
+    Info: Processing started: Fri Apr 14 15:11:09 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file mux2busx1.vhd
@@ -726,9 +724,6 @@ Info (12128): Elaborating entity "MAQUINA_B" for hierarchy "UC:inst22|MAQUINA_B:
 Info (12128): Elaborating entity "controlevisor" for hierarchy "controlevisor:inst23"
 Info (12128): Elaborating entity "display_utils" for hierarchy "controlevisor:inst23|display_utils:inst123"
 Info (12128): Elaborating entity "codec_mux" for hierarchy "controlevisor:inst23|codec_mux:inst50"
-Warning (275043): Pin "ad1" is missing source
-Warning (275009): Pin "address_down" not connected
-Warning (275008): Primitive "OR2" of instance "inst2" not used
 Info (12128): Elaborating entity "decoddisplay" for hierarchy "controlevisor:inst23|decoddisplay:inst6"
 Info (12128): Elaborating entity "ledA" for hierarchy "controlevisor:inst23|decoddisplay:inst6|ledA:inst"
 Info (12128): Elaborating entity "ledB" for hierarchy "controlevisor:inst23|decoddisplay:inst6|ledB:inst2"
@@ -773,13 +768,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 748 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 763 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 92 output pins
-    Info (21061): Implemented 642 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info (21061): Implemented 657 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 525 megabytes
-    Info: Processing ended: Fri Apr 14 14:45:34 2023
+    Info: Processing ended: Fri Apr 14 15:11:15 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

@@ -464,7 +464,7 @@ msg_done => display_utils:inst9.in_n
 msg_done => display_utils:inst3.in_o
 msg_done => inst8.IN0
 down_on => inst37.IN1
-down_on => inst56.IN0
+down_on => inst13.IN0
 down_on => inst7.IN2
 g1teste <= display_utils:inst123.g
 led00 <= decod2x4:inst1.d0
@@ -472,11 +472,15 @@ led01 <= decod2x4:inst1.d1
 led10 <= decod2x4:inst1.d2
 led11 <= decod2x4:inst1.d3
 ad0 <= codec_mux:inst50.ad0
-B_mostra_E => inst55.IN1
+B_mostra_E => inst14.IN0
 B_mostra_E => inst46.IN1
 B_done => codec_mux:inst50.read_reg
+B_done => read_reg_teste.DATAIN
 B_done => inst44.IN1
 ad1 <= codec_mux:inst50.ad1
+adress_down_teste <= inst55.DB_MAX_OUTPUT_PORT_TYPE
+read_reg_teste <= B_done.DB_MAX_OUTPUT_PORT_TYPE
+address_up_teste <= inst57.DB_MAX_OUTPUT_PORT_TYPE
 decod0[0] <= decoddisplay:inst6.OUT[0]
 decod0[1] <= decoddisplay:inst6.OUT[1]
 decod0[2] <= decoddisplay:inst6.OUT[2]
@@ -600,11 +604,12 @@ d0 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |trabalhofinalfinal_|controlevisor:inst23|codec_mux:inst50
-ad1 <= <GND>
+ad1 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+read_reg => inst2.IN0
+read_reg => inst.IN1
+address_down => inst2.IN1
 ad0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 address_up => inst.IN0
-read_reg => inst.IN1
-address_down => ~NO_FANOUT~
 
 
 |trabalhofinalfinal_|controlevisor:inst23|decoddisplay:inst6

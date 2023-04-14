@@ -22,5 +22,5 @@
 # Loading work.controlevisor_vlg_sample_tst
 # Loading work.controlevisor_vlg_check_tst
 # Simulation passed !
-# ** Note: $finish    : sim_controlevisor.vwf.vt(1313)
+# ** Note: $finish    : sim_controlevisor.vwf.vt(1394)
 #    Time: 1 us  Iteration: 0  Instance: /controlevisor_vlg_vec_tst/tb_out
