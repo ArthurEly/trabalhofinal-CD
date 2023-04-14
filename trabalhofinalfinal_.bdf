@@ -668,6 +668,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 2176 -192 2224 -176))
 )
 (symbol
 	(rect 576 -48 624 16)
@@ -4290,15 +4291,6 @@ applicable agreement for further details.
 	(pt -624 528)
 )
 (connector
-	(pt -184 808)
-	(pt -184 736)
-)
-(connector
-	(pt -184 808)
-	(pt 216 808)
-	(color 0 85 255)
-)
-(connector
 	(pt -184 600)
 	(pt -184 688)
 )
@@ -4506,7 +4498,7 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "q[25..0]" (rect -228 802 -216 839)(font "Arial" )(vertical))
+	(text "q[25..0]" (rect -226 800 -214 837)(font "Arial" )(vertical))
 	(pt -216 808)
 	(pt -216 848)
 	(bus)
@@ -4514,12 +4506,6 @@ applicable agreement for further details.
 (connector
 	(pt -432 840)
 	(pt -400 840)
-)
-(connector
-	(text "q[24]" (rect -206 792 -182 804)(font "Arial" ))
-	(pt -216 808)
-	(pt -184 808)
-	(color 0 85 255)
 )
 (connector
 	(pt 1848 -376)
@@ -4532,6 +4518,21 @@ applicable agreement for further details.
 (connector
 	(pt 1848 -200)
 	(pt 2000 -200)
+)
+(connector
+	(pt -184 808)
+	(pt -184 736)
+)
+(connector
+	(pt -184 808)
+	(pt 216 808)
+	(color 0 85 255)
+)
+(connector
+	(text "q[0]" (rect -206 792 -188 804)(font "Arial" ))
+	(pt -216 808)
+	(pt -184 808)
+	(color 0 85 255)
 )
 (junction (pt 1512 1576))
 (junction (pt 2192 1248))
