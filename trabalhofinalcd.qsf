@@ -48,7 +48,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/aluno/Desktop/trabalhofinal-CD/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -66,9 +66,9 @@ set_location_assignment PIN_E4 -to sw8
 set_location_assignment PIN_D2 -to sw9
 set_location_assignment PIN_J1 -to q
 set_location_assignment PIN_G21 -to clock
-set_location_assignment PIN_F1 -to troca_funcao
+set_location_assignment PIN_H2 -to troca_funcao
 set_location_assignment PIN_G3 -to confirma_funcao
-set_location_assignment PIN_H2 -to confirma_DA
+set_location_assignment PIN_F1 -to confirma_DA
 set_global_assignment -name SOURCE_FILE mux2busx1.cmp
 set_global_assignment -name QIP_FILE mux2busx1.qip
 set_global_assignment -name VHDL_FILE mux2busx1.vhd
@@ -116,6 +116,8 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinaB.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_maquinaC.vwf
 set_global_assignment -name BDF_FILE trabalhofinalfinal_.bdf
 set_global_assignment -name BDF_FILE codec_mux.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_controlevisor.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_location_assignment PIN_F13 -to d_0[6]
 set_location_assignment PIN_F12 -to d_0[5]
 set_location_assignment PIN_G12 -to d_0[4]
@@ -144,9 +146,14 @@ set_location_assignment PIN_B19 -to d_3[3]
 set_location_assignment PIN_A19 -to d_3[2]
 set_location_assignment PIN_F15 -to d_3[1]
 set_location_assignment PIN_B18 -to d_3[0]
-set_location_assignment PIN_B1 -to led
-set_location_assignment PIN_B2 -to led1
-set_global_assignment -name VECTOR_WAVEFORM_FILE sim_controlevisor.vwf
+set_location_assignment PIN_C1 -to led00
+set_location_assignment PIN_C2 -to led01
+set_location_assignment PIN_B2 -to led10
+set_location_assignment PIN_B1 -to led11
+set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform1.vwf
+set_location_assignment PIN_E1 -to doneLed
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

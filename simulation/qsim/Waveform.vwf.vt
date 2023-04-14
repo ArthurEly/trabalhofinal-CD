@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/13/2023 23:56:16"
+// Generated on "04/14/2023 10:16:04"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    display_utils
 // 
@@ -363,22 +363,26 @@ display_utils i1 (
 	.in_o(in_o)
 );
 
+// d0
+initial
+begin
+	d0 = 1'b1;
+	d0 = #60000 1'b0;
+end 
+
 // in_1
 initial
 begin
-	in_1 = 1'b1;
-	in_1 = #60000 1'b0;
-	in_1 = #340000 1'b1;
-	in_1 = #60000 1'b0;
+	in_1 = 1'b0;
+	in_1 = #60000 1'b1;
+	in_1 = #70000 1'b0;
 end 
 
 // in_2
 initial
 begin
 	in_2 = 1'b0;
-	in_2 = #60000 1'b1;
-	in_2 = #70000 1'b0;
-	in_2 = #270000 1'b1;
+	in_2 = #130000 1'b1;
 	in_2 = #60000 1'b0;
 end 
 
@@ -386,46 +390,32 @@ end
 initial
 begin
 	in_d = 1'b0;
-	in_d = #130000 1'b1;
-	in_d = #60000 1'b0;
-	in_d = #210000 1'b1;
-	in_d = #60000 1'b0;
+	in_d = #190000 1'b1;
+	in_d = #70000 1'b0;
 end 
 
 // in_e
 initial
 begin
 	in_e = 1'b0;
-	in_e = #190000 1'b1;
-	in_e = #70000 1'b0;
-	in_e = #140000 1'b1;
-	in_e = #60000 1'b0;
+	in_e = #260000 1'b1;
+	in_e = #80000 1'b0;
 end 
 
 // in_n
 initial
 begin
 	in_n = 1'b0;
-	in_n = #260000 1'b1;
-	in_n = #70000 1'b0;
-	in_n = #70000 1'b1;
-	in_n = #60000 1'b0;
+	in_n = #340000 1'b1;
+	in_n = #80000 1'b0;
 end 
 
 // in_o
 initial
 begin
 	in_o = 1'b0;
-	in_o = #330000 1'b1;
-	in_o = #130000 1'b0;
-end 
-
-// d0
-initial
-begin
-	d0 = 1'b0;
-	d0 = #400000 1'b1;
-	d0 = #60000 1'b0;
+	in_o = #420000 1'b1;
+	in_o = #100000 1'b0;
 end 
 
 display_utils_vlg_sample_tst tb_sample (

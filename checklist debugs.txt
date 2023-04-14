@@ -1,0 +1,15 @@
+
+	DEBUG 
+
+	**fazer para um switch 
+	**depois, fazer para os outros
+
+
+	- fazer funcionar para o contador zero, com mensagem de "OI"
+
+	- em seguida testar saídas do display de segmentos de acordo com as flags de entrada
+
+
+
+
+	- testar contador (pela questao do o botão de confirma levar para vários estados)e talvez adicionar mais um estado 

@@ -4,6 +4,10 @@ entity controlevisor_vlg_check_tst is
     port(
         a1teste         : in     vl_logic;
         g1teste         : in     vl_logic;
+        led00           : in     vl_logic;
+        led01           : in     vl_logic;
+        led10           : in     vl_logic;
+        led11           : in     vl_logic;
         VISOR0_REG      : in     vl_logic_vector(6 downto 0);
         VISOR1_REG      : in     vl_logic_vector(6 downto 0);
         VISOR2_REG      : in     vl_logic_vector(6 downto 0);
