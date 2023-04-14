@@ -1,5 +1,5 @@
 Flow report for trabalhofinalcd
-Thu Apr 13 05:24:52 2023
+Fri Apr 14 00:24:05 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 13 05:24:52 2023      ;
+; Flow Status                        ; Successful - Fri Apr 14 00:24:05 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
-; Top-level Entity Name              ; trabalhofinalfinal_                        ;
+; Top-level Entity Name              ; controlevisor                              ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16U484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 574 / 15,408 ( 4 % )                       ;
-;     Total combinational functions  ; 561 / 15,408 ( 4 % )                       ;
-;     Dedicated logic registers      ; 215 / 15,408 ( 1 % )                       ;
-; Total registers                    ; 215                                        ;
-; Total pins                         ; 72 / 347 ( 21 % )                          ;
+; Total logic elements               ; 12 / 15,408 ( < 1 % )                      ;
+;     Total combinational functions  ; 12 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                         ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 70 / 347 ( 20 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
@@ -64,37 +64,42 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/13/2023 04:44:51 ;
+; Start date & time ; 04/14/2023 00:21:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; trabalhofinalcd     ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                      ;
-+-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------------+----------------+
-; Assignment Name                     ; Value                                                                                  ; Default Value   ; Entity Name         ; Section Id     ;
-+-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 123719801489096.168137189141320                                                        ; --              ; --                  ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                     ; --              ; --                  ; eda_simulation ;
-; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ ; --              ; --                  ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                            ; --              ; --                  ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                              ; <None>          ; --                  ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                                                                   ; --              ; --                  ; eda_simulation ;
-; IP_TOOL_NAME                        ; LPM_COUNTER                                                                            ; --              ; --                  ; --             ;
-; IP_TOOL_VERSION                     ; 13.1                                                                                   ; --              ; --                  ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                     ; --              ; --                  ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                      ; --              ; --                  ; --             ;
-; MISC_FILE                           ; lpm_counter0.bsf                                                                       ; --              ; --                  ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                                   ; --              ; --                  ; --             ;
-; PARTITION_COLOR                     ; 16764057                                                                               ; --              ; trabalhofinalfinal_ ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                  ; --              ; trabalhofinalfinal_ ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                 ; --              ; trabalhofinalfinal_ ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                    ; --              ; --                  ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                  ; --              ; --                  ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                           ; --              ; --                  ; --             ;
-; TOP_LEVEL_ENTITY                    ; trabalhofinalfinal_                                                                    ; trabalhofinalcd ; --                  ; --             ;
-+-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                ;
++-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------+----------------+
+; Assignment Name                     ; Value                                                                                  ; Default Value   ; Entity Name   ; Section Id     ;
++-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 123719801489096.168144247513852                                                        ; --              ; --            ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                                     ; --              ; --            ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ ; --              ; --            ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                            ; --              ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                              ; <None>          ; --            ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                                                   ; --              ; --            ; eda_simulation ;
+; IP_TOOL_NAME                        ; LPM_MUX                                                                                ; --              ; --            ; --             ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                                                                            ; --              ; --            ; --             ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                   ; --              ; --            ; --             ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                   ; --              ; --            ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                     ; --              ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                      ; --              ; --            ; --             ;
+; MISC_FILE                           ; mux2busx1.bsf                                                                          ; --              ; --            ; --             ;
+; MISC_FILE                           ; mux2busx1_inst.vhd                                                                     ; --              ; --            ; --             ;
+; MISC_FILE                           ; mux2busx1.inc                                                                          ; --              ; --            ; --             ;
+; MISC_FILE                           ; mux2busx1.cmp                                                                          ; --              ; --            ; --             ;
+; MISC_FILE                           ; lpm_counter0.bsf                                                                       ; --              ; --            ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                               ; --              ; controlevisor ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                  ; --              ; controlevisor ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                 ; --              ; controlevisor ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                    ; --              ; --            ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                  ; --              ; --            ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                           ; --              ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; controlevisor                                                                          ; trabalhofinalcd ; --            ; --             ;
++-------------------------------------+----------------------------------------------------------------------------------------+-----------------+---------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -102,61 +107,18 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4701 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:10     ; 1.8                     ; 5547 MB             ; 00:00:12                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4699 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 5493 MB             ; 00:00:05                           ;
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4597 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4704 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4547 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4695 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4542 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4566 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4566 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4571 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4554 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:49     ; --                      ; --                  ; 00:01:08                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -176,49 +138,6 @@ applicable agreement for further details.
 ; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIT4FMJ  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -230,54 +149,11 @@ quartus_fit --read_settings_files=off --write_settings_files=off trabalhofinalcd
 quartus_asm --read_settings_files=off --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
 quartus_sta trabalhofinalcd -c trabalhofinalcd
 quartus_eda --read_settings_files=off --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_controlevisor.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_controlevisor.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_controlevisor.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_controlevisor.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
-quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_trabalhofinal.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_trabalhofinal.vwf.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog trabalhofinalcd -c trabalhofinalcd --vector_source=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/sim_controlevisor.vwf --testbench_file=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/sim_controlevisor.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/simulation/qsim/ trabalhofinalcd -c trabalhofinalcd
 
 

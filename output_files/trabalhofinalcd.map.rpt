@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trabalhofinalcd
-Thu Apr 13 04:44:54 2023
+Fri Apr 14 00:21:17 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,9 +15,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: mux2busx1:inst4|LPM_MUX:LPM_MUX_component
+ 11. Parameter Settings for User Entity Instance: mux2busx1:inst2|LPM_MUX:LPM_MUX_component
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +44,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 13 04:44:54 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 14 00:21:17 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; trabalhofinalcd                            ;
-; Top-level Entity Name              ; trabalhofinalfinal_                        ;
+; Top-level Entity Name              ; controlevisor                              ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 578                                        ;
-;     Total combinational functions  ; 561                                        ;
-;     Dedicated logic registers      ; 215                                        ;
-; Total registers                    ; 215                                        ;
-; Total pins                         ; 72                                         ;
+; Total logic elements               ; 12                                         ;
+;     Total combinational functions  ; 12                                         ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 70                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -60,91 +61,91 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                         ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
-; Option                                                                     ; Setting             ; Default Value      ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
-; Device                                                                     ; EP3C16U484C6        ;                    ;
-; Top-level entity name                                                      ; trabalhofinalfinal_ ; trabalhofinalcd    ;
-; Family name                                                                ; Cyclone III         ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                 ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                 ;
-; Enable compact report table                                                ; Off                 ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                ;
-; Preserve fewer node names                                                  ; On                  ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                ;
-; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                ; Auto               ;
-; Safe State Machine                                                         ; Off                 ; Off                ;
-; Extract Verilog State Machines                                             ; On                  ; On                 ;
-; Extract VHDL State Machines                                                ; On                  ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                 ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                  ; On                 ;
-; Parallel Synthesis                                                         ; On                  ; On                 ;
-; DSP Block Balancing                                                        ; Auto                ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                  ; On                 ;
-; Power-Up Don't Care                                                        ; On                  ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                 ; Off                ;
-; Remove Duplicate Registers                                                 ; On                  ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                 ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                 ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                 ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                  ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                ;
-; Optimization Technique                                                     ; Balanced            ; Balanced           ;
-; Carry Chain Length                                                         ; 70                  ; 70                 ;
-; Auto Carry Chains                                                          ; On                  ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                  ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                ;
-; Auto ROM Replacement                                                       ; On                  ; On                 ;
-; Auto RAM Replacement                                                       ; On                  ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                  ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                  ; On                 ;
-; Strict RAM Replacement                                                     ; Off                 ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                  ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                  ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                ;
-; Auto Resource Sharing                                                      ; Off                 ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                  ; On                 ;
-; Report Parameter Settings                                                  ; On                  ; On                 ;
-; Report Source Assignments                                                  ; On                  ; On                 ;
-; Report Connectivity Checks                                                 ; On                  ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                   ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation  ; Normal compilation ;
-; HDL message level                                                          ; Level2              ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                 ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                ;
-; Clock MUX Protection                                                       ; On                  ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                 ; Off                ;
-; Block Design Naming                                                        ; Auto                ; Auto               ;
-; SDC constraint protection                                                  ; Off                 ; Off                ;
-; Synthesis Effort                                                           ; Auto                ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium              ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                  ; On                 ;
-; Synthesis Seed                                                             ; 1                   ; 1                  ;
-+----------------------------------------------------------------------------+---------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16U484C6       ;                    ;
+; Top-level entity name                                                      ; controlevisor      ; trabalhofinalcd    ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -156,337 +157,97 @@ applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; display_utils.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display_utils.bdf       ;         ;
-; UC.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/UC.bdf                  ;         ;
-; MAQUINA_C.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_C.bdf           ;         ;
-; MAQUINA_B.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_B.bdf           ;         ;
-; MAQUINA_A.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MAQUINA_A.bdf           ;         ;
-; contador.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/contador.bdf            ;         ;
-; decod4x16.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod4x16.bdf           ;         ;
-; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod2x4.bdf            ;         ;
-; REG_1BYTE.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE.bdf           ;         ;
-; REG_1BIT.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT.bdf            ;         ;
-; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux16busx1.bdf          ;         ;
-; controlevisor.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/controlevisor.bdf       ;         ;
-; MEM_16ADD_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/MEM_16ADD_SWAP.bdf      ;         ;
-; REG_1BYTE_SWAP.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BYTE_SWAP.bdf      ;         ;
-; REG_1BIT_SWAP.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/REG_1BIT_SWAP.bdf       ;         ;
-; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/lpm_counter0.vhd        ;         ;
-; trabalhofinalfinal_.bdf          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/trabalhofinalfinal_.bdf ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_counter.tdf                                    ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_constant.inc                                   ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_add_sub.inc                                    ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/cmpconst.inc                                       ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_compare.inc                                    ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_counter.inc                                    ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/dffeea.inc                                         ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/alt_counter_stratix.inc                            ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/aglobal131.inc                                     ;         ;
-; db/cntr_lph.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/db/cntr_lph.tdf         ;         ;
-; 21mux.bdf                        ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/21mux.bdf                                        ;         ;
-; 161mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/161mux.bdf                                       ;         ;
-; 2x8mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/2x8mux.bdf                                       ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; mux2busx1.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux2busx1.vhd            ;         ;
+; display_utils.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display_utils.bdf        ;         ;
+; display/ledG.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledG.bdf         ;         ;
+; display/ledF.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledF.bdf         ;         ;
+; display/ledE.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledE.bdf         ;         ;
+; display/ledD.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledD.bdf         ;         ;
+; display/ledC.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledC.bdf         ;         ;
+; display/ledB.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledB.bdf         ;         ;
+; display/ledA.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/ledA.bdf         ;         ;
+; display/decoddisplay.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/display/decoddisplay.bdf ;         ;
+; decod2x4.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/decod2x4.bdf             ;         ;
+; mux16busx1.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux16busx1.bdf           ;         ;
+; controlevisor.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/controlevisor.bdf        ;         ;
+; codec_mux.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/codec_mux.bdf            ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/lpm_mux.tdf                                         ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/aglobal131.inc                                      ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/muxlut.inc                                          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/bypassff.inc                                        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/megafunctions/altshift.inc                                        ;         ;
+; db/mux_f6e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/db/mux_f6e.tdf           ;         ;
+; 161mux.bdf                       ; yes             ; Megafunction                       ; d:/altera3/quartus/libraries/others/maxplus2/161mux.bdf                                        ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 578         ;
-;                                             ;             ;
-; Total combinational functions               ; 561         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 281         ;
-;     -- 3 input functions                    ; 183         ;
-;     -- <=2 input functions                  ; 97          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 536         ;
-;     -- arithmetic mode                      ; 25          ;
-;                                             ;             ;
-; Total registers                             ; 215         ;
-;     -- Dedicated logic registers            ; 215         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 72          ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 215         ;
-; Total fan-out                               ; 2730        ;
-; Average fan-out                             ; 2.97        ;
-+---------------------------------------------+-------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 12             ;
+;                                             ;                ;
+; Total combinational functions               ; 12             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 8              ;
+;     -- 3 input functions                    ; 3              ;
+;     -- <=2 input functions                  ; 1              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 12             ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 70             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; count[1]~input ;
+; Maximum fan-out                             ; 10             ;
+; Total fan-out                               ; 141            ;
+; Average fan-out                             ; 0.93           ;
++---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
-; |trabalhofinalfinal_                      ; 561 (22)          ; 215 (0)      ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |trabalhofinalfinal_                                                                               ; work         ;
-;    |2x8mux:inst24|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|2x8mux:inst24                                                                 ; work         ;
-;    |MEM_16ADD_SWAP:inst|                  ; 474 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst                                                           ; work         ;
-;       |REG_1BYTE_SWAP:inst10|             ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst10|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst11|             ; 18 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst11|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst12|             ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst12|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst13|             ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst13|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst14|             ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst14|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst15|             ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst15|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst16|             ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst16|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst17|             ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst17|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst18|             ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst18|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst19|             ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19                                     ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1                 ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst2                 ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst3                 ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst4                 ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst5                 ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst6                 ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst7                 ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst8                 ; work         ;
-;       |REG_1BYTE_SWAP:inst1|              ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1                                      ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst1                  ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst2                  ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst3                  ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst4                  ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst5                  ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst6                  ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst7                  ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst1|REG_1BIT_SWAP:inst8                  ; work         ;
-;       |REG_1BYTE_SWAP:inst6|              ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6                                      ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst1                  ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst2                  ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst3                  ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst4                  ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst5                  ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst6                  ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst7                  ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst6|REG_1BIT_SWAP:inst8                  ; work         ;
-;       |REG_1BYTE_SWAP:inst7|              ; 18 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7                                      ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst1                  ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst2                  ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst3                  ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst4                  ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst5                  ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst6                  ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst7                  ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst7|REG_1BIT_SWAP:inst8                  ; work         ;
-;       |REG_1BYTE_SWAP:inst8|              ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8                                      ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst1                  ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst2                  ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst3                  ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst4                  ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst5                  ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst6                  ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst7                  ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst8|REG_1BIT_SWAP:inst8                  ; work         ;
-;       |REG_1BYTE_SWAP:inst9|              ; 17 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9                                      ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst1                  ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst2                  ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst3                  ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst4                  ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst5                  ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst6                  ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst7                  ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst9|REG_1BIT_SWAP:inst8                  ; work         ;
-;       |REG_1BYTE_SWAP:inst|               ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst                                       ; work         ;
-;          |REG_1BIT_SWAP:inst1|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst1                   ; work         ;
-;          |REG_1BIT_SWAP:inst2|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst2                   ; work         ;
-;          |REG_1BIT_SWAP:inst3|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst3                   ; work         ;
-;          |REG_1BIT_SWAP:inst4|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst4                   ; work         ;
-;          |REG_1BIT_SWAP:inst5|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst5                   ; work         ;
-;          |REG_1BIT_SWAP:inst6|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst6                   ; work         ;
-;          |REG_1BIT_SWAP:inst7|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst7                   ; work         ;
-;          |REG_1BIT_SWAP:inst8|            ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst|REG_1BIT_SWAP:inst8                   ; work         ;
-;       |decod4x16:inst2|                   ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2                                           ; work         ;
-;          |decod2x4:inst13|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst13                           ; work         ;
-;          |decod2x4:inst15|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst15                           ; work         ;
-;          |decod2x4:inst16|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst16                           ; work         ;
-;          |decod2x4:inst17|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst2|decod2x4:inst17                           ; work         ;
-;       |decod4x16:inst3|                   ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3                                           ; work         ;
-;          |decod2x4:inst13|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst13                           ; work         ;
-;          |decod2x4:inst15|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst15                           ; work         ;
-;          |decod2x4:inst16|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst16                           ; work         ;
-;          |decod2x4:inst17|                ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|decod4x16:inst3|decod2x4:inst17                           ; work         ;
-;       |mux16busx1:inst4|                  ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4                                          ; work         ;
-;          |161mux:inst2|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst2                             ; work         ;
-;          |161mux:inst3|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst3                             ; work         ;
-;          |161mux:inst4|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst4                             ; work         ;
-;          |161mux:inst5|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst5                             ; work         ;
-;          |161mux:inst6|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst6                             ; work         ;
-;          |161mux:inst7|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst7                             ; work         ;
-;          |161mux:inst8|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst8                             ; work         ;
-;          |161mux:inst|                    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst4|161mux:inst                              ; work         ;
-;       |mux16busx1:inst5|                  ; 80 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5                                          ; work         ;
-;          |161mux:inst2|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst2                             ; work         ;
-;          |161mux:inst3|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst3                             ; work         ;
-;          |161mux:inst4|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst4                             ; work         ;
-;          |161mux:inst5|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst5                             ; work         ;
-;          |161mux:inst6|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6                             ; work         ;
-;          |161mux:inst7|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst7                             ; work         ;
-;          |161mux:inst8|                   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst8                             ; work         ;
-;          |161mux:inst|                    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst                              ; work         ;
-;    |REG_1BYTE:ADDRESS_DOWN|               ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN                                                        ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst10                                        ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst11                                        ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst12                                        ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst13                                        ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst14                                        ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst8                                         ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst9                                         ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst                                          ; work         ;
-;    |REG_1BYTE:ADDRESS_UP|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP                                                          ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst10                                          ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst11                                          ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst12                                          ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst13                                          ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst14                                          ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst8                                           ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst9                                           ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:ADDRESS_UP|REG_1BIT:inst                                            ; work         ;
-;    |REG_1BYTE:DATA_DOWN|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN                                                           ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst10                                           ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst11                                           ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst12                                           ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst13                                           ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst14                                           ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst8                                            ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst9                                            ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_DOWN|REG_1BIT:inst                                             ; work         ;
-;    |REG_1BYTE:DATA_UP|                    ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP                                                             ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst10                                             ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst11                                             ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst12                                             ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst13                                             ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst14                                             ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst8                                              ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst9                                              ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_UP|REG_1BIT:inst                                               ; work         ;
-;    |REG_1BYTE:DATA_USER|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER                                                           ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst10                                           ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst11                                           ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst12                                           ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst13                                           ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst14                                           ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst8                                            ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst9                                            ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:DATA_USER|REG_1BIT:inst                                             ; work         ;
-;    |REG_1BYTE:READ_REG|                   ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG                                                            ; work         ;
-;       |REG_1BIT:inst10|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst10                                            ; work         ;
-;       |REG_1BIT:inst11|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst11                                            ; work         ;
-;       |REG_1BIT:inst12|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst12                                            ; work         ;
-;       |REG_1BIT:inst13|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst13                                            ; work         ;
-;       |REG_1BIT:inst14|                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst14                                            ; work         ;
-;       |REG_1BIT:inst8|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst8                                             ; work         ;
-;       |REG_1BIT:inst9|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst9                                             ; work         ;
-;       |REG_1BIT:inst|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|REG_1BYTE:READ_REG|REG_1BIT:inst                                              ; work         ;
-;    |UC:inst22|                            ; 31 (4)            ; 13 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22                                                                     ; work         ;
-;       |MAQUINA_A:inst3|                   ; 7 (7)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|MAQUINA_A:inst3                                                     ; work         ;
-;       |MAQUINA_B:inst4|                   ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|MAQUINA_B:inst4                                                     ; work         ;
-;       |MAQUINA_C:inst2|                   ; 12 (12)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|MAQUINA_C:inst2                                                     ; work         ;
-;       |contador:inst|                     ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|contador:inst                                                       ; work         ;
-;       |decod2x4:inst8|                    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|UC:inst22|decod2x4:inst8                                                      ; work         ;
-;    |lpm_counter0:inst21|                  ; 26 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21                                                           ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 26 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component                         ; work         ;
-;          |cntr_lph:auto_generated|        ; 26 (26)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |trabalhofinalfinal_|lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component|cntr_lph:auto_generated ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
+; |controlevisor                    ; 12 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 70   ; 0            ; |controlevisor                                                                  ; work         ;
+;    |decod2x4:inst1|               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|decod2x4:inst1                                                   ; work         ;
+;    |display_utils:inst123|        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|display_utils:inst123                                            ; work         ;
+;    |display_utils:inst3|          ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|display_utils:inst3                                              ; work         ;
+;    |mux2busx1:inst2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|mux2busx1:inst2                                                  ; work         ;
+;       |lpm_mux:LPM_MUX_component| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|mux2busx1:inst2|lpm_mux:LPM_MUX_component                        ; work         ;
+;          |mux_f6e:auto_generated| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |controlevisor|mux2busx1:inst2|lpm_mux:LPM_MUX_component|mux_f6e:auto_generated ; work         ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                             ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                          ; IP Include File                                                                        ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
-; Altera ; LPM_COUNTER  ; 13.1    ; N/A          ; N/A          ; |trabalhofinalfinal_|lpm_counter0:inst21 ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/lpm_counter0.vhd ;
-+--------+--------------+---------+--------------+--------------+------------------------------------------+----------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                                                     ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |controlevisor|mux2busx1:inst2 ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux2busx1.vhd ;
+; Altera ; LPM_MUX      ; N/A     ; N/A          ; N/A          ; |controlevisor|mux2busx1:inst4 ; C:/Users/arthu/OneDrive/Documentos/circuitosdigitais/trabalhofinal-CD/mux2busx1.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -494,40 +255,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 215   ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 128   ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component ;
-+------------------------+-------------+-------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                        ;
-+------------------------+-------------+-------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
-; LPM_WIDTH              ; 26          ; Signed Integer                                              ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
-; LPM_MODULUS            ; 0           ; Untyped                                                     ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
-; CBXI_PARAMETER         ; cntr_lph    ; Untyped                                                     ;
-+------------------------+-------------+-------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2busx1:inst4|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 7           ; Signed Integer                                  ;
+; LPM_SIZE               ; 2           ; Signed Integer                                  ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                  ;
+; CBXI_PARAMETER         ; mux_f6e     ; Untyped                                         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                         ;
++------------------------+-------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2busx1:inst2|LPM_MUX:LPM_MUX_component ;
++------------------------+-------------+-------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                            ;
++------------------------+-------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 7           ; Signed Integer                                  ;
+; LPM_SIZE               ; 2           ; Signed Integer                                  ;
+; LPM_WIDTHS             ; 1           ; Signed Integer                                  ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                  ;
+; CBXI_PARAMETER         ; mux_f6e     ; Untyped                                         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                         ;
++------------------------+-------------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -536,7 +308,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -546,9 +318,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Apr 13 04:44:50 2023
+    Info: Processing started: Fri Apr 14 00:21:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trabalhofinalcd -c trabalhofinalcd
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file mux2busx1.vhd
+    Info (12022): Found design unit 1: mux2busx1-SYN
+    Info (12023): Found entity 1: mux2busx1
 Info (12021): Found 1 design units, including 1 entities, in source file display_utils.bdf
     Info (12023): Found entity 1: display_utils
 Info (12021): Found 1 design units, including 1 entities, in source file uc.bdf
@@ -608,69 +383,87 @@ Info (12021): Found 2 design units, including 1 entities, in source file lpm_cou
     Info (12023): Found entity 1: lpm_counter0
 Info (12021): Found 1 design units, including 1 entities, in source file trabalhofinalfinal_.bdf
     Info (12023): Found entity 1: trabalhofinalfinal_
-Info (12127): Elaborating entity "trabalhofinalfinal_" for the top level hierarchy
-Warning (275011): Block or symbol "REG_1BYTE" of instance "DATA_UP" overlaps another block or symbol
-Warning (275011): Block or symbol "decod2x4" of instance "inst38" overlaps another block or symbol
-Warning (275085): Found inconsistent dimensions for element "q"
-Warning (275080): Converted elements in bus name "q" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "q[25..0]" to "q25..0"
-    Warning (275081): Converted element name(s) from "q[25]" to "q25"
-Warning (275008): Primitive "NOT" of instance "inst19" not used
-Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst21"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component"
-Info (12130): Elaborated megafunction instantiation "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component"
-Info (12133): Instantiated megafunction "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component" with the following parameter:
-    Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
-    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
-    Info (12134): Parameter "lpm_width" = "26"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lph.tdf
-    Info (12023): Found entity 1: cntr_lph
-Info (12128): Elaborating entity "cntr_lph" for hierarchy "lpm_counter0:inst21|lpm_counter:LPM_COUNTER_component|cntr_lph:auto_generated"
-Info (12128): Elaborating entity "UC" for hierarchy "UC:inst22"
-Info (12128): Elaborating entity "MAQUINA_C" for hierarchy "UC:inst22|MAQUINA_C:inst2"
-Info (12128): Elaborating entity "decod2x4" for hierarchy "UC:inst22|decod2x4:inst8"
-Info (12128): Elaborating entity "contador" for hierarchy "UC:inst22|contador:inst"
-Info (12128): Elaborating entity "MAQUINA_A" for hierarchy "UC:inst22|MAQUINA_A:inst3"
-Info (12128): Elaborating entity "MAQUINA_B" for hierarchy "UC:inst22|MAQUINA_B:inst4"
-Info (12128): Elaborating entity "REG_1BYTE" for hierarchy "REG_1BYTE:ADDRESS_DOWN"
-Info (12128): Elaborating entity "REG_1BIT" for hierarchy "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst"
-Info (12128): Elaborating entity "21mux" for hierarchy "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|21mux:inst1"
-Info (12130): Elaborated megafunction instantiation "REG_1BYTE:ADDRESS_DOWN|REG_1BIT:inst|21mux:inst1"
-Info (12128): Elaborating entity "MEM_16ADD_SWAP" for hierarchy "MEM_16ADD_SWAP:inst"
-Info (12128): Elaborating entity "mux16busx1" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5"
-Info (12128): Elaborating entity "161mux" for hierarchy "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
-Info (12130): Elaborated megafunction instantiation "MEM_16ADD_SWAP:inst|mux16busx1:inst5|161mux:inst6"
-Info (12128): Elaborating entity "REG_1BYTE_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19"
-Info (12128): Elaborating entity "REG_1BIT_SWAP" for hierarchy "MEM_16ADD_SWAP:inst|REG_1BYTE_SWAP:inst19|REG_1BIT_SWAP:inst1"
-Info (12128): Elaborating entity "decod4x16" for hierarchy "MEM_16ADD_SWAP:inst|decod4x16:inst2"
-Info (12128): Elaborating entity "2x8mux" for hierarchy "2x8mux:inst24"
-Info (12130): Elaborated megafunction instantiation "2x8mux:inst24"
-Info (12128): Elaborating entity "controlevisor" for hierarchy "controlevisor:inst23"
-Warning (275009): Pin "S_mostraE" not connected
-Warning (275009): Pin "B_mostra_D" not connected
-Warning (275009): Pin "B_done" not connected
-Warning (275009): Pin "A_mostra_DA" not connected
-Warning (275009): Pin "msg_done" not connected
+Info (12021): Found 1 design units, including 1 entities, in source file codec_mux.bdf
+    Info (12023): Found entity 1: codec_mux
+Info (12127): Elaborating entity "controlevisor" for the top level hierarchy
+Info (12128): Elaborating entity "display_utils" for hierarchy "display_utils:inst123"
+Info (12128): Elaborating entity "decod2x4" for hierarchy "decod2x4:inst1"
+Info (12128): Elaborating entity "mux2busx1" for hierarchy "mux2busx1:inst4"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "mux2busx1:inst4|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "mux2busx1:inst4|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "mux2busx1:inst4|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "7"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f6e.tdf
+    Info (12023): Found entity 1: mux_f6e
+Info (12128): Elaborating entity "mux_f6e" for hierarchy "mux2busx1:inst4|LPM_MUX:LPM_MUX_component|mux_f6e:auto_generated"
+Info (12128): Elaborating entity "decoddisplay" for hierarchy "decoddisplay:inst6"
+Info (12128): Elaborating entity "ledA" for hierarchy "decoddisplay:inst6|ledA:inst"
+Info (12128): Elaborating entity "ledB" for hierarchy "decoddisplay:inst6|ledB:inst2"
+Info (12128): Elaborating entity "ledC" for hierarchy "decoddisplay:inst6|ledC:inst3"
+Info (12128): Elaborating entity "ledD" for hierarchy "decoddisplay:inst6|ledD:inst4"
+Info (12128): Elaborating entity "ledE" for hierarchy "decoddisplay:inst6|ledE:inst5"
+Warning (275008): Primitive "NOT" of instance "inst11" not used
+Info (12128): Elaborating entity "ledF" for hierarchy "decoddisplay:inst6|ledF:inst6"
+Info (12128): Elaborating entity "ledG" for hierarchy "decoddisplay:inst6|ledG:inst7"
+Info (12128): Elaborating entity "mux16busx1" for hierarchy "mux16busx1:inst49"
+Info (12128): Elaborating entity "161mux" for hierarchy "mux16busx1:inst49|161mux:inst6"
+Info (12130): Elaborated megafunction instantiation "mux16busx1:inst49|161mux:inst6"
+Info (12128): Elaborating entity "codec_mux" for hierarchy "codec_mux:inst50"
+Warning (275043): Pin "ad1" is missing source
 Warning (275009): Pin "address_down" not connected
-Warning (275009): Pin "address_up" not connected
-Warning (275009): Pin "count" not connected
-Warning (275009): Pin "data_user" not connected
-Warning (275009): Pin "read_reg" not connected
-Info (12128): Elaborating entity "display_utils" for hierarchy "controlevisor:inst23|display_utils:inst"
-Info (13014): Ignored 80 buffer(s)
-    Info (13019): Ignored 80 SOFT buffer(s)
+Warning (275008): Primitive "OR2" of instance "inst2" not used
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VISOR0_REG[1]" is stuck at VCC
+    Warning (13410): Pin "VISOR1_REG[1]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 674 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 602 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Thu Apr 13 04:44:54 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+Warning (21074): Design contains 32 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "data_user[7]"
+    Warning (15610): No output dependent on input pin "data_user[6]"
+    Warning (15610): No output dependent on input pin "data_user[5]"
+    Warning (15610): No output dependent on input pin "data_user[4]"
+    Warning (15610): No output dependent on input pin "data_user[3]"
+    Warning (15610): No output dependent on input pin "data_user[2]"
+    Warning (15610): No output dependent on input pin "data_user[1]"
+    Warning (15610): No output dependent on input pin "data_user[0]"
+    Warning (15610): No output dependent on input pin "address_up[7]"
+    Warning (15610): No output dependent on input pin "address_up[6]"
+    Warning (15610): No output dependent on input pin "address_up[5]"
+    Warning (15610): No output dependent on input pin "address_up[4]"
+    Warning (15610): No output dependent on input pin "address_up[3]"
+    Warning (15610): No output dependent on input pin "address_up[2]"
+    Warning (15610): No output dependent on input pin "address_up[1]"
+    Warning (15610): No output dependent on input pin "address_up[0]"
+    Warning (15610): No output dependent on input pin "address_down[7]"
+    Warning (15610): No output dependent on input pin "address_down[6]"
+    Warning (15610): No output dependent on input pin "address_down[5]"
+    Warning (15610): No output dependent on input pin "address_down[4]"
+    Warning (15610): No output dependent on input pin "address_down[3]"
+    Warning (15610): No output dependent on input pin "address_down[2]"
+    Warning (15610): No output dependent on input pin "address_down[1]"
+    Warning (15610): No output dependent on input pin "address_down[0]"
+    Warning (15610): No output dependent on input pin "read_reg[7]"
+    Warning (15610): No output dependent on input pin "read_reg[6]"
+    Warning (15610): No output dependent on input pin "read_reg[5]"
+    Warning (15610): No output dependent on input pin "read_reg[4]"
+    Warning (15610): No output dependent on input pin "read_reg[3]"
+    Warning (15610): No output dependent on input pin "read_reg[2]"
+    Warning (15610): No output dependent on input pin "read_reg[1]"
+    Warning (15610): No output dependent on input pin "read_reg[0]"
+Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 12 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4699 megabytes
+    Info: Processing ended: Fri Apr 14 00:21:17 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

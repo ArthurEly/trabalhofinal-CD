@@ -18,30 +18,36 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/04/2023 16:53:09"
+// Generated on "04/13/2023 23:56:16"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    controlevisor
+// Verilog Self-Checking Test Bench (with test vectors) for design :    display_utils
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module controlevisor_vlg_sample_tst(
-	ADRESS_REG,
-	DATA_REG,
-	sw8,
-	sw9,
+module display_utils_vlg_sample_tst(
+	d0,
+	in_1,
+	in_2,
+	in_d,
+	in_e,
+	in_n,
+	in_o,
 	sampler_tx
 );
-input [7:0] ADRESS_REG;
-input [7:0] DATA_REG;
-input  sw8;
-input  sw9;
+input  d0;
+input  in_1;
+input  in_2;
+input  in_d;
+input  in_e;
+input  in_n;
+input  in_o;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(ADRESS_REG or DATA_REG or sw8 or sw9)
+always @(d0 or in_1 or in_2 or in_d or in_e or in_n or in_o)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -60,27 +66,63 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module controlevisor_vlg_check_tst (
-	VISOR_REG,
+module display_utils_vlg_check_tst (
+	a,
+	b,
+	c,
+	d,
+	e,
+	f,
+	g,
 	sampler_rx
 );
-input [7:0] VISOR_REG;
+input  a;
+input  b;
+input  c;
+input  d;
+input  e;
+input  f;
+input  g;
 input sampler_rx;
 
-reg [7:0] VISOR_REG_expected;
+reg  a_expected;
+reg  b_expected;
+reg  c_expected;
+reg  d_expected;
+reg  e_expected;
+reg  f_expected;
+reg  g_expected;
 
-reg [7:0] VISOR_REG_prev;
+reg  a_prev;
+reg  b_prev;
+reg  c_prev;
+reg  d_prev;
+reg  e_prev;
+reg  f_prev;
+reg  g_prev;
 
-reg [7:0] VISOR_REG_expected_prev;
+reg  a_expected_prev;
+reg  b_expected_prev;
+reg  c_expected_prev;
+reg  d_expected_prev;
+reg  e_expected_prev;
+reg  f_expected_prev;
+reg  g_expected_prev;
 
-reg [7:0] last_VISOR_REG_exp;
+reg  last_a_exp;
+reg  last_b_exp;
+reg  last_c_exp;
+reg  last_d_exp;
+reg  last_e_exp;
+reg  last_f_exp;
+reg  last_g_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:1] on_first_change ;
+reg [1:7] on_first_change ;
 
 
 initial
@@ -88,66 +130,80 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 1'b1;
+on_first_change = 7'b1;
 end
 
 // update real /o prevs
 
 always @(trigger)
 begin
-	VISOR_REG_prev = VISOR_REG;
+	a_prev = a;
+	b_prev = b;
+	c_prev = c;
+	d_prev = d;
+	e_prev = e;
+	f_prev = f;
+	g_prev = g;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	VISOR_REG_expected_prev = VISOR_REG_expected;
+	a_expected_prev = a_expected;
+	b_expected_prev = b_expected;
+	c_expected_prev = c_expected;
+	d_expected_prev = d_expected;
+	e_expected_prev = e_expected;
+	f_expected_prev = f_expected;
+	g_expected_prev = g_expected;
 end
 
 
-// expected VISOR_REG[ 7 ]
+
+// expected a
 initial
 begin
-	VISOR_REG_expected[7] = 1'bX;
+	a_expected = 1'bX;
 end 
-// expected VISOR_REG[ 6 ]
+
+// expected b
 initial
 begin
-	VISOR_REG_expected[6] = 1'bX;
+	b_expected = 1'bX;
 end 
-// expected VISOR_REG[ 5 ]
+
+// expected c
 initial
 begin
-	VISOR_REG_expected[5] = 1'bX;
+	c_expected = 1'bX;
 end 
-// expected VISOR_REG[ 4 ]
+
+// expected d
 initial
 begin
-	VISOR_REG_expected[4] = 1'bX;
+	d_expected = 1'bX;
 end 
-// expected VISOR_REG[ 3 ]
+
+// expected e
 initial
 begin
-	VISOR_REG_expected[3] = 1'bX;
+	e_expected = 1'bX;
 end 
-// expected VISOR_REG[ 2 ]
+
+// expected f
 initial
 begin
-	VISOR_REG_expected[2] = 1'bX;
+	f_expected = 1'bX;
 end 
-// expected VISOR_REG[ 1 ]
+
+// expected g
 initial
 begin
-	VISOR_REG_expected[1] = 1'bX;
-end 
-// expected VISOR_REG[ 0 ]
-initial
-begin
-	VISOR_REG_expected[0] = 1'bX;
+	g_expected = 1'bX;
 end 
 // generate trigger
-always @(VISOR_REG_expected or VISOR_REG)
+always @(a_expected or a or b_expected or b or c_expected or c or d_expected or d or e_expected or e or f_expected or f or g_expected or g)
 begin
 	trigger <= ~trigger;
 end
@@ -157,112 +213,99 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected VISOR_REG = %b | ",VISOR_REG_expected_prev);
-	$display("| real VISOR_REG = %b | ",VISOR_REG_prev);
+	$display("| expected a = %b | expected b = %b | expected c = %b | expected d = %b | expected e = %b | expected f = %b | expected g = %b | ",a_expected_prev,b_expected_prev,c_expected_prev,d_expected_prev,e_expected_prev,f_expected_prev,g_expected_prev);
+	$display("| real a = %b | real b = %b | real c = %b | real d = %b | real e = %b | real f = %b | real g = %b | ",a_prev,b_prev,c_prev,d_prev,e_prev,f_prev,g_prev);
 `endif
 	if (
-		( VISOR_REG_expected_prev[0] !== 1'bx ) && ( VISOR_REG_prev[0] !== VISOR_REG_expected_prev[0] )
-		&& ((VISOR_REG_expected_prev[0] !== last_VISOR_REG_exp[0]) ||
+		( a_expected_prev !== 1'bx ) && ( a_prev !== a_expected_prev )
+		&& ((a_expected_prev !== last_a_exp) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port a :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", a_expected_prev);
+		$display ("     Real value = %b", a_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[0] = VISOR_REG_expected_prev[0];
+		last_a_exp = a_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[1] !== 1'bx ) && ( VISOR_REG_prev[1] !== VISOR_REG_expected_prev[1] )
-		&& ((VISOR_REG_expected_prev[1] !== last_VISOR_REG_exp[1]) ||
-			on_first_change[1])
+		( b_expected_prev !== 1'bx ) && ( b_prev !== b_expected_prev )
+		&& ((b_expected_prev !== last_b_exp) ||
+			on_first_change[2])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port b :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", b_expected_prev);
+		$display ("     Real value = %b", b_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[1] = VISOR_REG_expected_prev[1];
+		on_first_change[2] = 1'b0;
+		last_b_exp = b_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[2] !== 1'bx ) && ( VISOR_REG_prev[2] !== VISOR_REG_expected_prev[2] )
-		&& ((VISOR_REG_expected_prev[2] !== last_VISOR_REG_exp[2]) ||
-			on_first_change[1])
+		( c_expected_prev !== 1'bx ) && ( c_prev !== c_expected_prev )
+		&& ((c_expected_prev !== last_c_exp) ||
+			on_first_change[3])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port c :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_expected_prev);
+		$display ("     Real value = %b", c_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[2] = VISOR_REG_expected_prev[2];
+		on_first_change[3] = 1'b0;
+		last_c_exp = c_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[3] !== 1'bx ) && ( VISOR_REG_prev[3] !== VISOR_REG_expected_prev[3] )
-		&& ((VISOR_REG_expected_prev[3] !== last_VISOR_REG_exp[3]) ||
-			on_first_change[1])
+		( d_expected_prev !== 1'bx ) && ( d_prev !== d_expected_prev )
+		&& ((d_expected_prev !== last_d_exp) ||
+			on_first_change[4])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port d :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", d_expected_prev);
+		$display ("     Real value = %b", d_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[3] = VISOR_REG_expected_prev[3];
+		on_first_change[4] = 1'b0;
+		last_d_exp = d_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[4] !== 1'bx ) && ( VISOR_REG_prev[4] !== VISOR_REG_expected_prev[4] )
-		&& ((VISOR_REG_expected_prev[4] !== last_VISOR_REG_exp[4]) ||
-			on_first_change[1])
+		( e_expected_prev !== 1'bx ) && ( e_prev !== e_expected_prev )
+		&& ((e_expected_prev !== last_e_exp) ||
+			on_first_change[5])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port e :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", e_expected_prev);
+		$display ("     Real value = %b", e_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[4] = VISOR_REG_expected_prev[4];
+		on_first_change[5] = 1'b0;
+		last_e_exp = e_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[5] !== 1'bx ) && ( VISOR_REG_prev[5] !== VISOR_REG_expected_prev[5] )
-		&& ((VISOR_REG_expected_prev[5] !== last_VISOR_REG_exp[5]) ||
-			on_first_change[1])
+		( f_expected_prev !== 1'bx ) && ( f_prev !== f_expected_prev )
+		&& ((f_expected_prev !== last_f_exp) ||
+			on_first_change[6])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port f :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", f_expected_prev);
+		$display ("     Real value = %b", f_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[5] = VISOR_REG_expected_prev[5];
+		on_first_change[6] = 1'b0;
+		last_f_exp = f_expected_prev;
 	end
 	if (
-		( VISOR_REG_expected_prev[6] !== 1'bx ) && ( VISOR_REG_prev[6] !== VISOR_REG_expected_prev[6] )
-		&& ((VISOR_REG_expected_prev[6] !== last_VISOR_REG_exp[6]) ||
-			on_first_change[1])
+		( g_expected_prev !== 1'bx ) && ( g_prev !== g_expected_prev )
+		&& ((g_expected_prev !== last_g_exp) ||
+			on_first_change[7])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[6] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
+		$display ("ERROR! Vector Mismatch for output port g :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", g_expected_prev);
+		$display ("     Real value = %b", g_prev);
 		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[6] = VISOR_REG_expected_prev[6];
-	end
-	if (
-		( VISOR_REG_expected_prev[7] !== 1'bx ) && ( VISOR_REG_prev[7] !== VISOR_REG_expected_prev[7] )
-		&& ((VISOR_REG_expected_prev[7] !== last_VISOR_REG_exp[7]) ||
-			on_first_change[1])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port VISOR_REG[7] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", VISOR_REG_expected_prev);
-		$display ("     Real value = %b", VISOR_REG_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[1] = 1'b0;
-		last_VISOR_REG_exp[7] = VISOR_REG_expected_prev[7];
+		on_first_change[7] = 1'b0;
+		last_g_exp = g_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -280,138 +323,130 @@ $finish;
 end 
 endmodule
 
-module controlevisor_vlg_vec_tst();
+module display_utils_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg [7:0] ADRESS_REG;
-reg [7:0] DATA_REG;
-reg sw8;
-reg sw9;
+reg d0;
+reg in_1;
+reg in_2;
+reg in_d;
+reg in_e;
+reg in_n;
+reg in_o;
 // wires                                               
-wire [7:0] VISOR_REG;
+wire a;
+wire b;
+wire c;
+wire d;
+wire e;
+wire f;
+wire g;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-controlevisor i1 (
+display_utils i1 (
 // port map - connection between master ports and signals/registers   
-	.ADRESS_REG(ADRESS_REG),
-	.DATA_REG(DATA_REG),
-	.sw8(sw8),
-	.sw9(sw9),
-	.VISOR_REG(VISOR_REG)
+	.a(a),
+	.b(b),
+	.c(c),
+	.d(d),
+	.d0(d0),
+	.e(e),
+	.f(f),
+	.g(g),
+	.in_1(in_1),
+	.in_2(in_2),
+	.in_d(in_d),
+	.in_e(in_e),
+	.in_n(in_n),
+	.in_o(in_o)
 );
-// ADRESS_REG[ 7 ]
+
+// in_1
 initial
 begin
-	ADRESS_REG[7] = 1'b0;
-end 
-// ADRESS_REG[ 6 ]
-initial
-begin
-	ADRESS_REG[6] = 1'b0;
-end 
-// ADRESS_REG[ 5 ]
-initial
-begin
-	ADRESS_REG[5] = 1'b1;
-end 
-// ADRESS_REG[ 4 ]
-initial
-begin
-	ADRESS_REG[4] = 1'b0;
-end 
-// ADRESS_REG[ 3 ]
-initial
-begin
-	ADRESS_REG[3] = 1'b1;
-end 
-// ADRESS_REG[ 2 ]
-initial
-begin
-	ADRESS_REG[2] = 1'b0;
-end 
-// ADRESS_REG[ 1 ]
-initial
-begin
-	ADRESS_REG[1] = 1'b1;
-end 
-// ADRESS_REG[ 0 ]
-initial
-begin
-	ADRESS_REG[0] = 1'b1;
-end 
-// DATA_REG[ 7 ]
-initial
-begin
-	DATA_REG[7] = 1'b1;
-end 
-// DATA_REG[ 6 ]
-initial
-begin
-	DATA_REG[6] = 1'b1;
-end 
-// DATA_REG[ 5 ]
-initial
-begin
-	DATA_REG[5] = 1'b0;
-end 
-// DATA_REG[ 4 ]
-initial
-begin
-	DATA_REG[4] = 1'b0;
-end 
-// DATA_REG[ 3 ]
-initial
-begin
-	DATA_REG[3] = 1'b1;
-end 
-// DATA_REG[ 2 ]
-initial
-begin
-	DATA_REG[2] = 1'b1;
-end 
-// DATA_REG[ 1 ]
-initial
-begin
-	DATA_REG[1] = 1'b0;
-end 
-// DATA_REG[ 0 ]
-initial
-begin
-	DATA_REG[0] = 1'b0;
+	in_1 = 1'b1;
+	in_1 = #60000 1'b0;
+	in_1 = #340000 1'b1;
+	in_1 = #60000 1'b0;
 end 
 
-// sw8
+// in_2
 initial
 begin
-	repeat(2)
-	begin
-		sw8 = 1'b0;
-		sw8 = #200000 1'b1;
-		# 200000;
-	end
-	sw8 = 1'b0;
+	in_2 = 1'b0;
+	in_2 = #60000 1'b1;
+	in_2 = #70000 1'b0;
+	in_2 = #270000 1'b1;
+	in_2 = #60000 1'b0;
 end 
 
-// sw9
-always
+// in_d
+initial
 begin
-	sw9 = 1'b0;
-	sw9 = #100000 1'b1;
-	#100000;
+	in_d = 1'b0;
+	in_d = #130000 1'b1;
+	in_d = #60000 1'b0;
+	in_d = #210000 1'b1;
+	in_d = #60000 1'b0;
 end 
 
-controlevisor_vlg_sample_tst tb_sample (
-	.ADRESS_REG(ADRESS_REG),
-	.DATA_REG(DATA_REG),
-	.sw8(sw8),
-	.sw9(sw9),
+// in_e
+initial
+begin
+	in_e = 1'b0;
+	in_e = #190000 1'b1;
+	in_e = #70000 1'b0;
+	in_e = #140000 1'b1;
+	in_e = #60000 1'b0;
+end 
+
+// in_n
+initial
+begin
+	in_n = 1'b0;
+	in_n = #260000 1'b1;
+	in_n = #70000 1'b0;
+	in_n = #70000 1'b1;
+	in_n = #60000 1'b0;
+end 
+
+// in_o
+initial
+begin
+	in_o = 1'b0;
+	in_o = #330000 1'b1;
+	in_o = #130000 1'b0;
+end 
+
+// d0
+initial
+begin
+	d0 = 1'b0;
+	d0 = #400000 1'b1;
+	d0 = #60000 1'b0;
+end 
+
+display_utils_vlg_sample_tst tb_sample (
+	.d0(d0),
+	.in_1(in_1),
+	.in_2(in_2),
+	.in_d(in_d),
+	.in_e(in_e),
+	.in_n(in_n),
+	.in_o(in_o),
 	.sampler_tx(sampler)
 );
 
-controlevisor_vlg_check_tst tb_out(
-	.VISOR_REG(VISOR_REG),
+display_utils_vlg_check_tst tb_out(
+	.a(a),
+	.b(b),
+	.c(c),
+	.d(d),
+	.e(e),
+	.f(f),
+	.g(g),
 	.sampler_rx(sampler)
 );
 endmodule

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C16U484C6
-set_global_assignment -name TOP_LEVEL_ENTITY trabalhofinalfinal_
+set_global_assignment -name TOP_LEVEL_ENTITY controlevisor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:29:18  MARCH 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.1
@@ -71,7 +71,6 @@ set_location_assignment PIN_G3 -to confirma_funcao
 set_location_assignment PIN_H2 -to confirma_DA
 set_global_assignment -name SOURCE_FILE mux2busx1.cmp
 set_global_assignment -name QIP_FILE mux2busx1.qip
-set_global_assignment -name BDF_FILE testebus.bdf
 set_global_assignment -name VHDL_FILE mux2busx1.vhd
 set_global_assignment -name BDF_FILE display_utils.bdf
 set_global_assignment -name BDF_FILE UC.bdf
@@ -146,8 +145,8 @@ set_location_assignment PIN_A19 -to d_3[2]
 set_location_assignment PIN_F15 -to d_3[1]
 set_location_assignment PIN_B18 -to d_3[0]
 set_location_assignment PIN_B1 -to led
-set_global_assignment -name BDF_FILE testeteste.bdf
 set_location_assignment PIN_B2 -to led1
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_controlevisor.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
