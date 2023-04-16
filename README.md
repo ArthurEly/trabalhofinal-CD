@@ -67,17 +67,28 @@
 		Se Estado 00 & confirmaD/A 	 -> 	Load Registrador (data OU address)	(2x pra lembrar q ha dois switchs)
 		Se Estado 00 & confirmaD/A 	 -> 	Load Registrador (data OU address)	
 
-		Se Estado 00 & confirmaFuncao 	 -> 	Write Memoria (vindo do Registrador Data)	-> Estado 01
- 
+		Se Estado 00 & confirmaFuncao 	 -> 	Estado 01
+
 		Se Estado 00 & trocaFuncao	 ->	Troca para Máquina B
 
 		[Qualquer outra coisa nao faz nada] 
 
-		Estado 01 = mensagem 'ok blz' 					(preciso clicar em confirma Funcao pra sair)
-		Se Estado 01 & confirmaFuncao 	 ->	Estado 00
+
+		Estado 01 = Write Memoria
+		Se estado 01			-> 	Write
+
+		Se estado 01			-> 	Estado 10			
+
+
+		Estado 10 = Dont care
+		Se estado 10 			-> 	Estado 11
+
+
+ 
+		Estado 11 =  mensagem 'ok blz' 					(preciso clicar em confirma Funcao pra sair)
+		Se Estado 11 & confirmaFuncao 	 ->	Estado 00
 
 		[Qualquer outra coisa nao faz nada] 
-				
 
 	MÁQUINA B (Lê da memória)
 		Estado 00 = mensagem de espera
